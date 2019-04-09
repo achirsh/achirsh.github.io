@@ -317,6 +317,542 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_02/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/15/rn_02/" class="post-title-link" itemprop="url">React Native解决'libgnustl_shared.so is 32-bit instead if 64-bit'报错</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:42:30" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>React Native项目在64位Android手机上运行，会提示<br>“/data/data/com.xxx.xxx/lib-main/libgnustl_shared.so”is 32-bit instead of 64-bit这个错误。</p>
+<p>解决方法就是取消掉所有64位的.so文件，全部加载32位的就可以了，下面是步骤</p>
+<ol>
+<li>在项目的根部录的gradle.properties里面添加一行代码，android.useDeprecatedNdk = true.</li>
+<li>在build.gradle文件里添加以下代码：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">	...</span><br><span class="line">	defaultConfig &#123;</span><br><span class="line">		...</span><br><span class="line">		ndk &#123;</span><br><span class="line">			abiFilters: &quot;armeabi-v7a&quot;,&quot;x86&quot;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		packagingOptions &#123;</span><br><span class="line">			exclude &quot;lib/arm64-v8a/librealm-jni.so&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_03/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/15/rn_03/" class="post-title-link" itemprop="url">React Naitve 错误集锦</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-15 10:30:48" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-17 16:44:49" itemprop="dateModified" datetime="2019-01-17T16:44:49+08:00">2019-01-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1、在android华为手机上运行React-native工程时出现了如下错:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">报错：unable to load script from assets &apos;index.android.bundle&apos;, make sure your bundle is packaged correctly or youu’re running a packager server</span><br></pre></td></tr></table></figure>
+<p>解决办法：<br><br>    1、在Android/app/src/main目录下创建一个空的assets文件夹<br><br>    2、进入项目跟目录执行下面代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运行完毕后assets文件夹下会多出index.android.bundle和index.android.bundle.meta两个文件</span><br></pre></td></tr></table></figure>
+<p>重新运行<br></p>
+<p>总结:<br><br>index.android.bundle是用来调用原生控件的js脚本，每次当改变index.android.js,都需要使用上面的代码片段，来及时的更新index.android.bundle文件，然后打包才可以把新的index.android.js应用上，所以没有index.android.bundle文件时，React-Native项目时无法运行的。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/mobile_01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/15/mobile_01/" class="post-title-link" itemprop="url">移动端开发自适应解决方案（阿里团队高清方案）</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-15 10:30:48" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-17 16:27:37" itemprop="dateModified" datetime="2019-01-17T16:27:37+08:00">2019-01-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/移动端/" itemprop="url" rel="index"><span itemprop="name">移动端</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>移动端自适应方案有很多<br><br>1、流式布局<br></p>
+<p>也就是固定高度，宽度是用百分比的方法，这种方法会导致一些元素在大屏手机上拉伸严重的情况，影响视觉效果，只有在很少一部分手机上能完美的展示设计师想要的效果。<br></p>
+<p>2、固定宽度做法<br></p>
+<p>比如早期的淘宝webpage，页面设置成320的宽度，超出部分留白，在大屏幕手机上，就会出现两条大白边，分辨旅高的手机，页面看起来就会特别小，按钮，文字也很小。<br></p>
+<p>3、响应式做法<br></p>
+<p>用一些css框架，比如bootstrap，或者juqeryUI，使用媒体查询，这种方式维护成本高，很少有大型网站使用这种布局。<br></p>
+<p>4、设置viewport进行缩放<br></p>
+<p>天猫的web app的首页就是采用这种方式去做的，以320宽度为基准，进行缩放，最大缩放为320*1.3 = 416，基本缩放到416都可以兼容iphone6 plus的屏幕了，这个方法简单粗暴，又高效。不过有时候使用过程中缩放会导致有些页面元素会糊。<br></p>
+<p>5、rem布局<br>  </p>
+<p>rem是css3新引入的单位，在pc端会有兼容问题，对移动端比较友好。简而言之就是通过动态设置html跟元素的fontsize，等比缩放元素大小来自适应移动设备。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">! function(e) &#123;</span><br><span class="line">	function t(a) &#123;</span><br><span class="line">		if (i[a]) return i[a].exports;</span><br><span class="line">		var n = i[a] = &#123;</span><br><span class="line">			exports: &#123;&#125;,</span><br><span class="line">			id: a,</span><br><span class="line">			loaded: !1</span><br><span class="line">		&#125;;</span><br><span class="line">		return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports</span><br><span class="line">	&#125;</span><br><span class="line">	var i = &#123;&#125;;</span><br><span class="line">	return t.m = e, t.c = i, t.p = &quot;&quot;, t(0)</span><br><span class="line">&#125;([function(e, t) &#123;</span><br><span class="line">	&quot;use strict&quot;;</span><br><span class="line">	Object.defineProperty(t, &quot;__esModule&quot;, &#123;</span><br><span class="line">		value: !0</span><br><span class="line">	&#125;);</span><br><span class="line">	var i = window;</span><br><span class="line">	t[&quot;default&quot;] = i.flex = function(e, t) &#123;</span><br><span class="line">		var a = e || 100,</span><br><span class="line">			n = t || 1,</span><br><span class="line">			r = i.document,</span><br><span class="line">			o = navigator.userAgent,</span><br><span class="line">			d = o.match(/Android[\S\s]+AppleWebkit\/(\d&#123;3&#125;)/i),</span><br><span class="line">			l = o.match(/U3\/((\d+|\.)&#123;5,&#125;)/i),</span><br><span class="line">			c = l &amp;&amp; parseInt(l[1].split(&quot;.&quot;).join(&quot;&quot;), 10) &gt;= 80,</span><br><span class="line">			p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),</span><br><span class="line">			s = i.devicePixelRatio || 1;</span><br><span class="line">		p || d &amp;&amp; d[1] &gt; 534 || c || (s = 1);</span><br><span class="line">		var u = 1 / s,</span><br><span class="line">			m = r.querySelector(&apos;meta[name=&quot;viewport&quot;]&apos;);</span><br><span class="line">		m || (m = r.createElement(&quot;meta&quot;), m.setAttribute(&quot;name&quot;, &quot;viewport&quot;), r.head.appendChild(m)), m.setAttribute(&quot;content&quot;, &quot;width=device-width,user-scalable=no,initial-scale=&quot; + u + &quot;,maximum-scale=&quot; + u + &quot;,minimum-scale=&quot; + u), r.documentElement.style.fontSize = a / 2 * s * n + &quot;px&quot;</span><br><span class="line">	&#125;, e.exports = t[&quot;default&quot;]</span><br><span class="line">&#125;]);</span><br><span class="line">flex(100, 1);</span><br></pre></td></tr></table></figure>
+<h5 id="代码原理"><a href="#代码原理" class="headerlink" title="代码原理"></a>代码原理</h5><p>1、根据设备屏幕的DPR(设备像素比，比如dpr=2时，表示一个css像素由2x2个物理像素点组成)动态设置html的font-size。<br><br>2、同事根据设备DPR调整页面的缩放值，进而达到高清效果。</p>
+<h5 id="方案优势"><a href="#方案优势" class="headerlink" title="方案优势"></a>方案优势</h5><p>1、引用简单，方便布局(只要把js代码贴到head标签里面，就可以使用了，设计稿一般是640或者750，不需要进行单位换算，直接用设计稿的尺寸就可以，比如设计稿又一个btn的高度为80px，宽度为120px，高清方案默认1rem=100px，那么btn的宽度就设置为:)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.btn &#123;</span><br><span class="line">    width: 0.8rem,</span><br><span class="line">    height: 1.2rem</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2、根据设备屏幕的DPR，自动设置最合适的高清缩放。保证了不同设备视觉体验的一致性。<br><br>3、有效解决移动端真是1px问题(这里的1px是设备屏幕上的物理像素)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">注意：</span><br><span class="line">并不是所有用px的地方都要用rem，rem布局只针对固定宽度。</span><br><span class="line">依需求而定，比如淘宝页面底下的tabar，和头部的搜索区域，都是用百分比来布局的，或者flex和模型，当在ipad上打开的时候就可以看见，头部和tab是撑满全屏的。</span><br><span class="line">中间的主要内容（最外部的容器）要设置一个max-width，demo设置的是max-width：10rem，这里我不太明白为什么要设置成10rem，有弄明白的小伙伴希望能告诉我。谢谢（已解决，和设置最外层宽度为100%是一样的道理，10rem 可以适配到所有手机设备。1000%可以适配ipad，demo试试就知道了）</span><br><span class="line">（应用了此方案，不管设计图多宽（当然，一般宽度为750，640也可以），最外层的div宽度设为100%就行，然后就可以愉快的布局了，不会出现你说的白边的情况。）</span><br><span class="line"></span><br><span class="line">对于尺寸比较大的元素，应该考虑用百分比。rem做单位的元素在哪种设备下都是固定大小，这点必须牢记！！</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">可能遇到的问题：</span><br><span class="line">1.问：为啥手机网页效果图宽度是要640或者750的，我非得弄个666的不行咩？</span><br><span class="line"></span><br><span class="line">答：老实说当然可以，不过为了规范，640或者750是相对合适的。拿Iphone 5s 举例，它的css像素宽度是320px，由于它的dpr=2，所以它的物理像素宽度为320 × 2 = 640px，这也就是为什么，你在5s上截了一张图，在电脑上打开，它的原始宽度是640px的原因。那 iphone 6 的截图宽度呢？ 375 × 2 = 750那 iphone 6 sp 的截图宽度呢？ 414 × 3 = 1242以此类推，你现在能明白效果图为什么一般是 640 ，750 甚至是 1242 的原因了么？（真没有歧视安卓机的意思。。。）</span><br><span class="line"></span><br><span class="line">2.问：宽度用rem写的情况下， 在 iphone6 上没问题， 在 iphone5上会有横向滚动条，何解？</span><br><span class="line"></span><br><span class="line">答：假设你的效果图宽度是750，在这个效果图上可能有一个宽度为7rem（高清方案默认 1rem = 100px）的元素。我们知道，高清方案的特点就是几乎完美还原效果图，也就是说，你写了一个宽度为 7rem 的元素，那么在目前主流移动设备上都是7rem。然而，iphone 5 的宽度为640，也就是6.4rem。于是横向滚动条不可避免的出现了。怎么办呢？ 这是我目前推荐的比较安全的方式：如果元素的宽度超过效果图宽度的一半（效果图宽为640或750），果断使用百分比宽度，或者flex布局。就像把等屏宽的图片宽度设为100%一样。</span><br><span class="line"></span><br><span class="line">3.问：不是 1rem = 100px吗，为什么我的代码写了一个宽度为3rem的元素，在电脑端的谷歌浏览器上宽度只有150px?</span><br><span class="line"></span><br><span class="line">答：先说高清方案代码，再次强调咱们的高清方案代码是根据设备的dpr动态设置html 的 font-size，如果dpr=1(如电脑端），则html的font-size为50px，此时 1rem = 50px如果dpr=2(如iphone 5 和 6），则html的font-size为100px，此时 1rem = 100px如果dpr=3(如iphone 6 sp），则html的font-size为150px，此时 1rem = 150px如果dpr为其他值，即便不是整数，如3.4 , 也是一样直接将dpr 乘以 50 。</span><br><span class="line">再来说说效果图，一般来讲，我们的效果图宽度要么是640，要么是750，无论哪一个，它们对应设备的dpr=2，此时，1 rem = 50 × 2 = 100px。这也就是为什么高清方案默认1rem = 100px。而将1rem默认100px也是好处多多，可以帮你快速换算单位，比如在750宽度下的效果图，某元素宽度为53px，那么css宽度直接设为53/100=0.53rem了。</span><br><span class="line">然而极少情况下，有设计师将效果图宽定为1242px，因为他手里只有一个iphone 6 sp (dpr = 3)，设计完效果图刚好可以在他的iphone 6 sp里查看调整。一切完毕之后，他将这个效果图交给你来切图。由于这个效果图对应设备的dpr=3，也就是1rem = 50 × 3 = 150px。所以如果你量取了一个宽度为90px的元素，它的css宽度应该为 90/150=0.6rem。由于咱们的高清方案默认1rem=100px，为了还原效果图，你需要这样换算。当然，一个技巧就是你可以直接修改咱们的高清方案的默认设置。在代码的最后 你会看到 flex(100, 1) ，将其修改成flex(66.66667, 1)（感谢简友：V旅行指出此处错误！ 2017/3/24）就不用那么麻烦的换算了，此时那个90px的直接写成0.9rem就可以了。</span><br><span class="line"></span><br><span class="line">4.问：高清方案在微信上，有时候字体会不受控制变的很大，怎么办？</span><br><span class="line"></span><br><span class="line">答：点我，这是我对该问题的总结</span><br><span class="line">5.问：我在底部导航用的flex感觉更合适一些，请问这样子混着用可以吗？</span><br><span class="line"></span><br><span class="line">答：咱们的rem适合写固定尺寸。其余的根据需要换成flex或者百分比。源码示例中就有这三种的综合运用。</span><br><span class="line">6.问：在高清方案下，一个标准的，较为理想的宽度为640的页面效果图应该是怎样的？</span><br><span class="line"></span><br><span class="line">7.这个会和bootstrap冲突。</span><br><span class="line">解决办法：</span><br><span class="line">1，将bootstrap 中，凡是用到px的单位一律换成rem</span><br><span class="line">2，如果你有使用webpack，建议使用将css转成rem的包（postcss-pxtorem）将自动完成第一步的操作。</span><br><span class="line"></span><br><span class="line">8.@2x和@3x的图片还要判断不同的dpr下用不同的图片。</span><br><span class="line"></span><br><span class="line">Normalize.css 是一个可以定制的CSS文件，它让不同的浏览器在渲染网页元素的时候形式更统一。</span><br><span class="line"></span><br><span class="line">Normalize.css 能干什么：</span><br><span class="line"></span><br><span class="line">保留有用的默认值，不同于许多 CSS 的重置</span><br><span class="line"></span><br><span class="line">标准化的样式，适用范围广的元素。</span><br><span class="line"></span><br><span class="line">纠正错误和常见的浏览器的不一致性。</span><br><span class="line"></span><br><span class="line">一些细微的改进，提高了易用性。</span><br><span class="line"></span><br><span class="line">使用详细的注释来解释代码。</span><br><span class="line"></span><br><span class="line">支持的浏览器：</span><br><span class="line"></span><br><span class="line">Google Chrome (latest)</span><br><span class="line"></span><br><span class="line">Mozilla Firefox (latest)</span><br><span class="line"></span><br><span class="line">Mozilla Firefox ESR</span><br><span class="line"></span><br><span class="line">Opera (latest)</span><br><span class="line"></span><br><span class="line">Apple Safari 6+</span><br><span class="line"></span><br><span class="line">Internet Explorer 8+</span><br></pre></td></tr></table></figure>
+<p>引用于<a href="https://www.jianshu.com/p/07669cb3e7c5" target="_blank" rel="noopener">https://www.jianshu.com/p/07669cb3e7c5</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_04/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -585,7 +1121,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -612,7 +1148,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
