@@ -317,6 +317,961 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2020/02/07/js_02/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/02/07/js_02/" class="post-title-link" itemprop="url">js验证函数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-02-07 16:28:50 / Modified: 16:29:16" itemprop="dateCreated datePublished" datetime="2020-02-07T16:28:50+08:00">2020-02-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 判断手机号是否正确</span><br><span class="line">function isEffectPhone(phone: any) &#123;</span><br><span class="line">    const reg = /^[1][3,4,5,6,7,8][0-9]&#123;9&#125;$/;</span><br><span class="line">    if (!reg.test(phone)) &#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 判断传入时间是否大于当前实际时间</span><br><span class="line">export function contrastTime(start) &#123;</span><br><span class="line">    return start.getTime() - new Date().getTime();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//获取屏幕宽度</span><br><span class="line">function getClientWidth() &#123;</span><br><span class="line">    const width = (document.documentElement &amp;&amp; document.documentElement.clientWidth) ?</span><br><span class="line">        document.documentElement.clientWidth : document.body.clientWidth;</span><br><span class="line">    return (width &lt;= 1470);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">截取字符串后几位</span><br><span class="line">function subStringEnd(string, n: number) &#123;</span><br><span class="line">    return string.substring(string.length - n)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 根据数据获取所有值的和</span><br><span class="line">function getSum(arr, type?: string) &#123;</span><br><span class="line">    let result = 0;</span><br><span class="line">    for (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (type) &#123;</span><br><span class="line">            result += (arr[i][type] * 1000);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            result += arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result / 1000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 隐藏手机号中间四位</span><br><span class="line">function getTel(tel: string) &#123;</span><br><span class="line">    return tel.substring(0, 3) + &apos;****&apos; + tel.substring(tel.length - 4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 判断手机是iod/android</span><br><span class="line">function checkPlatform() &#123;</span><br><span class="line">    if (/android/i.test(navigator.userAgent)) &#123;</span><br><span class="line">        // console.log(&quot;This is Android&apos;browser.&quot;);//这是Android平台下浏览器</span><br><span class="line">        return &apos;0&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) &#123;</span><br><span class="line">        // console.log(&quot;This is iOS&apos;browser.&quot;);//这是iOS平台下浏览器</span><br><span class="line">        return &apos;1&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    if (/Linux/i.test(navigator.userAgent)) &#123;</span><br><span class="line">        // console.log(&quot;This is Linux&apos;browser.&quot;);//这是Linux平台下浏览器</span><br><span class="line">        return &apos;2&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    if (/Linux/i.test(navigator.platform)) &#123;</span><br><span class="line">        // console.log(&quot;This is Linux operating system.&quot;);//这是Linux操作系统平台</span><br><span class="line">        return &apos;2&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    if (/MicroMessenger/i.test(navigator.userAgent)) &#123;</span><br><span class="line">        // console.log(&quot;This is MicroMessenger&apos;browser.&quot;);//这是微信平台下浏览器</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 生成随机的n位数</span><br><span class="line">function generateFiveRandomNum(n) &#123;</span><br><span class="line">    let code = &apos;&apos;;</span><br><span class="line">    for (let i = 0; i &lt; n+1; i++) &#123;</span><br><span class="line">        code += Math.floor(Math.random() * 10);</span><br><span class="line">    &#125;</span><br><span class="line">    return code;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// blob转base64</span><br><span class="line">function blobToDataURI(blob: any, callback: any) &#123;</span><br><span class="line">    var reader = new FileReader();</span><br><span class="line">    reader.onload = function (e: any) &#123;</span><br><span class="line">        callback(e.target.result);</span><br><span class="line">    &#125;</span><br><span class="line">    reader.readAsDataURL(blob);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2020/02/07/js_01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/02/07/js_01/" class="post-title-link" itemprop="url">js图片相关操作</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-02-07 16:09:08 / Modified: 16:09:17" itemprop="dateCreated datePublished" datetime="2020-02-07T16:09:08+08:00">2020-02-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">base64转Blob</span><br><span class="line"></span><br><span class="line">function base64ToBlob(base64) &#123;</span><br><span class="line">    return new Promise(resolve =&gt; &#123;</span><br><span class="line">        if (typeof base64 !== &quot;string&quot;) &#123;</span><br><span class="line">            return resolve(base64);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        const bytes = window.atob(base64.split(&quot;,&quot;)[1]);</span><br><span class="line">        // 处理异常，将ascii码小于0的转换为大于0</span><br><span class="line">        const buffer = new ArrayBuffer(bytes.length);</span><br><span class="line">        const arr = new Uint8Array(buffer);</span><br><span class="line">        for (let i = 0; i &lt; bytes.length; i++) &#123;</span><br><span class="line">            arr[i] = bytes.charCodeAt(i);</span><br><span class="line">        &#125;</span><br><span class="line">        resolve(new Blob([buffer], &#123; type: &quot;image/jpeg&quot; &#125;));</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">base64转File</span><br><span class="line"></span><br><span class="line"> public dataURLtoFile(dataurl, filename) &#123; // 将base64转换为文件</span><br><span class="line">    const arr = dataurl.split(&quot;,&quot;);</span><br><span class="line">    const mime = arr[0].match(/:(.*?);/)[1];</span><br><span class="line">    const bstr = atob(arr[1]);</span><br><span class="line">    let n = bstr.length;</span><br><span class="line">    const u8arr = new Uint8Array(n);</span><br><span class="line">    while (n--) &#123;</span><br><span class="line">        u8arr[n] = bstr.charCodeAt(n);</span><br><span class="line">    &#125;</span><br><span class="line">    return new File([u8arr], filename, &#123; type: mime &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">base64转ArrayBuffer对象</span><br><span class="line"></span><br><span class="line">function base64ToArrayBuffer(base64) &#123;</span><br><span class="line">    base64 = base64.replace(/^data\:([^\;]+)\;base64,/gmi, &quot;&quot;);</span><br><span class="line">    const binary = atob(base64);</span><br><span class="line">    const len = binary.length;</span><br><span class="line">    const buffer = new ArrayBuffer(len);</span><br><span class="line">    const view = new Uint8Array(buffer);</span><br><span class="line">    for (let i = 0; i &lt; len; i++) &#123;</span><br><span class="line">        view[i] = binary.charCodeAt(i);</span><br><span class="line">    &#125;</span><br><span class="line">    return buffer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">获取图片的exif的角度</span><br><span class="line"></span><br><span class="line">function getOrientation(arrayBuffer) &#123;</span><br><span class="line">        const dataView = new DataView(arrayBuffer);</span><br><span class="line">    let length = dataView.byteLength;</span><br><span class="line">    let orientation;</span><br><span class="line">    let exifIDCode;</span><br><span class="line">    let tiffOffset;</span><br><span class="line">    let firstIFDOffset;</span><br><span class="line">    let littleEndian;</span><br><span class="line">    let endianness;</span><br><span class="line">    let app1Start;</span><br><span class="line">    let ifdStart;</span><br><span class="line">    let offset;</span><br><span class="line">    let i;</span><br><span class="line">    // Only handle JPEG image (start by 0xFFD8)</span><br><span class="line">    if (dataView.getUint8(0) === 0xFF &amp;&amp; dataView.getUint8(1) === 0xD8) &#123;</span><br><span class="line">        offset = 2;</span><br><span class="line">        while (offset &lt; length) &#123;</span><br><span class="line">            if (dataView.getUint8(offset) === 0xFF &amp;&amp; dataView.getUint8(offset + 1) === 0xE1) &#123;</span><br><span class="line">                app1Start = offset;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            offset++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if (app1Start) &#123;</span><br><span class="line">        exifIDCode = app1Start + 4;</span><br><span class="line">        tiffOffset = app1Start + 10;</span><br><span class="line">        if (getStringFromCharCode(dataView, exifIDCode, 4) === &quot;Exif&quot;) &#123;</span><br><span class="line">            endianness = dataView.getUint16(tiffOffset);</span><br><span class="line">            littleEndian = endianness === 0x4949;</span><br><span class="line"></span><br><span class="line">            if (littleEndian || endianness === 0x4D4D /* bigEndian */) &#123;</span><br><span class="line">                if (dataView.getUint16(tiffOffset + 2, littleEndian) === 0x002A) &#123;</span><br><span class="line">                    firstIFDOffset = dataView.getUint32(tiffOffset + 4, littleEndian);</span><br><span class="line"></span><br><span class="line">                    if (firstIFDOffset &gt;= 0x00000008) &#123;</span><br><span class="line">                        ifdStart = tiffOffset + firstIFDOffset;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if (ifdStart) &#123;</span><br><span class="line">        length = dataView.getUint16(ifdStart, littleEndian);</span><br><span class="line"></span><br><span class="line">        for (i = 0; i &lt; length; i++) &#123;</span><br><span class="line">            offset = ifdStart + i * 12 + 2;</span><br><span class="line">            if (dataView.getUint16(offset, littleEndian) === 0x0112 /* Orientation */) &#123;</span><br><span class="line"></span><br><span class="line">                // 8 is the offset of the current tag&apos;s value</span><br><span class="line">                offset += 8;</span><br><span class="line"></span><br><span class="line">                // Get the original orientation value</span><br><span class="line">                orientation = dataView.getUint16(offset, littleEndian);</span><br><span class="line"></span><br><span class="line">                // Override the orientation with its default value for Safari (#120)</span><br><span class="line">                if (true) &#123;</span><br><span class="line">                    dataView.setUint16(offset, 1, littleEndian);</span><br><span class="line">                &#125;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return orientation;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">ios图片旋转问题</span><br><span class="line"></span><br><span class="line">function rotateImg(img, direction, canvas) &#123;</span><br><span class="line">    // 最小与最大旋转方向，图片旋转4次后回到原方向</span><br><span class="line">    // tslint:disable-next-line:variable-name</span><br><span class="line">    const min_step = 0;</span><br><span class="line">    // tslint:disable-next-line:variable-name</span><br><span class="line">    const max_step = 3;</span><br><span class="line">    if (img == null) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    const height = img.height;</span><br><span class="line">    const width = img.width;</span><br><span class="line">    let step = 2;</span><br><span class="line">    if (step == null) &#123;</span><br><span class="line">        step = min_step;</span><br><span class="line">    &#125;</span><br><span class="line">    if (direction === &quot;right&quot;) &#123;</span><br><span class="line">        step++;</span><br><span class="line">        // 旋转到原位置，即超过最大值</span><br><span class="line">        // tslint:disable-next-line:no-unused-expression</span><br><span class="line">        step &gt; max_step &amp;&amp; (step = min_step);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        step--;</span><br><span class="line">        // tslint:disable-next-line:no-unused-expression</span><br><span class="line">        step &lt; min_step &amp;&amp; (step = max_step);</span><br><span class="line">    &#125;</span><br><span class="line">    // 旋转角度以弧度值为参数</span><br><span class="line">    const degree = step * 90 * Math.PI / 180;</span><br><span class="line">    const ctx = canvas.getContext(&quot;2d&quot;);</span><br><span class="line">    switch (step) &#123;</span><br><span class="line">        case 0:</span><br><span class="line">            canvas.width = width;</span><br><span class="line">            canvas.height = height;</span><br><span class="line">            ctx.drawImage(img, 0, 0);</span><br><span class="line">            break;</span><br><span class="line">        case 1:</span><br><span class="line">            canvas.width = height;</span><br><span class="line">            canvas.height = width;</span><br><span class="line">            ctx.rotate(degree);</span><br><span class="line">            ctx.drawImage(img, 0, -height);</span><br><span class="line">            break;</span><br><span class="line">        case 2:</span><br><span class="line">            canvas.width = width;</span><br><span class="line">            canvas.height = height;</span><br><span class="line">            ctx.rotate(degree);</span><br><span class="line">            ctx.drawImage(img, -width, -height);</span><br><span class="line">            break;</span><br><span class="line">        case 3:</span><br><span class="line">            canvas.width = height;</span><br><span class="line">            canvas.height = width;</span><br><span class="line">            ctx.rotate(degree);</span><br><span class="line">            ctx.drawImage(img, -width, 0);</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 判断图片大小</span><br><span class="line">function testMaxSize(size, maxSize) &#123;</span><br><span class="line">    let isAllow = false;</span><br><span class="line">    isAllow = size &lt;= maxSize;</span><br><span class="line">    if (!isAllow) &#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    return isAllow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">旋转图片实际例子</span><br><span class="line"></span><br><span class="line">const reader = new FileReader();</span><br><span class="line">reader.readAsDataURL(file);</span><br><span class="line">reader.onload = () =&gt; &#123;</span><br><span class="line">    dealImage(reader.result, file, 800, (data) =&gt; &#123;</span><br><span class="line">        const size = this.testMaxSize(data.size, 1048576);</span><br><span class="line">        if (!size) &#123;</span><br><span class="line">            Message.error(&quot;图片过大,请上传小于1M的图片&quot;);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function dealImage(base64Url, files, w, bacllback) &#123;</span><br><span class="line">    const newImage = new Image();</span><br><span class="line">    let orientation;</span><br><span class="line">    orientation = getOrientation(base64ToArrayBuffer(base64Url));</span><br><span class="line">    newImage.src = base64Url;</span><br><span class="line">    newImage.onload = async () =&gt; &#123;</span><br><span class="line">        const canvas = document.createElement(&quot;canvas&quot;);</span><br><span class="line">        if (orientation &amp;&amp; orientation !== 1) &#123;</span><br><span class="line">            if (orientation === 6) &#123;</span><br><span class="line">                this.rotateImg(newImage, &quot;left&quot;, canvas);</span><br><span class="line">                this.yasuo(canvas.toDataURL(&quot;image/jpeg&quot;, 0.8), w, callback, files);</span><br><span class="line">            &#125; else if (orientation === 8) &#123;</span><br><span class="line">                this.rotateImg(newImage, &quot;right&quot;, canvas);</span><br><span class="line">                this.yasuo(canvas.toDataURL(&quot;image/jpeg&quot;, 0.8), w, callback, files);</span><br><span class="line">            &#125; else if (orientation === 3) &#123;</span><br><span class="line">                this.rotateImg(newImage, &quot;right&quot;, canvas);</span><br><span class="line">                this.rotateImg(newImage, &quot;right&quot;, canvas);</span><br><span class="line">                this.yasuo(canvas.toDataURL(&quot;image/jpeg&quot;, 0.8), w, callback, files);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            this.yasuo(base64Url, w, callback, files);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function yasuo(base64Url, w, callback, files) &#123;</span><br><span class="line">    let imgWidth;</span><br><span class="line">    let imgHeight;</span><br><span class="line">    let blob: any;</span><br><span class="line">    const img = new Image();</span><br><span class="line">    img.src = base64Url;</span><br><span class="line">    img.onload = async () =&gt; &#123;</span><br><span class="line">        imgWidth = img.width;</span><br><span class="line">        imgHeight = img.height;</span><br><span class="line">        const canvas = document.createElement(&quot;canvas&quot;);</span><br><span class="line">        const ctx: any = canvas.getContext(&quot;2d&quot;);</span><br><span class="line">        if (Math.max(imgWidth, imgHeight) &gt; w) &#123;</span><br><span class="line">            if (imgWidth &gt; imgHeight) &#123;</span><br><span class="line">                canvas.width = w;</span><br><span class="line">                canvas.height = w * imgHeight / imgWidth;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                canvas.height = w;</span><br><span class="line">                canvas.width = w * imgWidth / imgHeight;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            canvas.width = imgWidth;</span><br><span class="line">            canvas.height = imgHeight;</span><br><span class="line">        &#125;</span><br><span class="line">        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);</span><br><span class="line">        blob = await this.dataURLtoFile(canvas.toDataURL(&quot;image/jpeg&quot;, 0.8), files.name);</span><br><span class="line">        callback(blob);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/06/10/immutable_01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/10/immutable_01/" class="post-title-link" itemprop="url">Untitled</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-10 16:28:27" itemprop="dateCreated datePublished" datetime="2019-06-10T16:28:27+08:00">2019-06-10</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/06/10/react_02/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/10/react_02/" class="post-title-link" itemprop="url">React Key对渲染的影响</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-06-10 16:09:38 / Modified: 16:09:40" itemprop="dateCreated datePublished" datetime="2019-06-10T16:09:38+08:00">2019-06-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">使用React的开发版本时常会遇到这样的情况：</span><br><span class="line"></span><br><span class="line">渲染列表时，不为数组的每一项设置key，则控制台会警告，</span><br><span class="line">Warning：Each child in an array or iterator should have a unique &apos;key&apos; prop</span><br><span class="line"></span><br><span class="line">常有人为了消除警告，把数组的下标(index)作为key，但是当React渲染列表时，把数组的下标作为</span><br><span class="line">key时不正确的，它能做的，仅仅是消除告警而已，对渲染毫无帮助。</span><br><span class="line"></span><br><span class="line">React的key应该是稳定的，唯一的(只要在列表项中唯一就行)，把数组的下标作为key的缺点在于没有</span><br><span class="line">满足稳定性要求，推荐把id或者uuid等字段作为React的key，减少React对DOM操作</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/04/10/alg-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/10/alg-01/" class="post-title-link" itemprop="url">列表</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-10 10:02:34 / Modified: 10:12:51" itemprop="dateCreated datePublished" datetime="2019-04-10T10:02:34+08:00">2019-04-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/04/09/git_01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/09/git_01/" class="post-title-link" itemprop="url">Gitc撤销已经commit但是还没有push的代码</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-09 18:08:23 / Modified: 18:18:18" itemprop="dateCreated datePublished" datetime="2019-04-09T18:08:23+08:00">2019-04-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">在git commit之后，正想着push，突然发现有些东西我们不想push上去</span><br><span class="line">这个时候我们想把提交的撤销掉，重新提交我们想提交的，push我们想要push的</span><br><span class="line">1、找到之前提交的git commit的id</span><br><span class="line">git log </span><br><span class="line">找到想要撤销的id</span><br><span class="line">2、git reset -hard id</span><br><span class="line">完成撤销，同时将代码恢复到前commit_id对应的版本，强制回滚到之前的版本</span><br><span class="line">3、git reset id</span><br><span class="line">完成撤销，停留在当前版本，不对代码修改进行撤销，可以直接通过git commit重新提交对本地代码的修改。</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/04/09/face_02/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -654,7 +1609,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/react_02/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_02/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="achirsh">
@@ -674,7 +1629,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/01/15/react_02/" class="post-title-link" itemprop="url">React下拉刷新</a>
+                <a href="/2019/01/15/rn_02/" class="post-title-link" itemprop="url">React Native解决'libgnustl_shared.so is 32-bit instead if 64-bit'报错</a>
               
             
           </h1>
@@ -699,7 +1654,7 @@
                 
               
 
-              <time title="Created: 2019-01-15 10:30:48 / Modified: 17:10:19" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
+              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:42:30" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
             
 
             
@@ -721,7 +1676,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
 
                 
                 
@@ -758,323 +1713,13 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;;</span><br><span class="line">import HttpUtil  from  &apos;../common/common&apos;</span><br><span class="line">import PullRefresh from &apos;reactjs-pull-refresh&apos;</span><br><span class="line"></span><br><span class="line">export default class NewList extends Component&#123;</span><br><span class="line">	constructor(props)&#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state=&#123;</span><br><span class="line">			hasMore: true,  //是否加载更多</span><br><span class="line">			stores: [],     //数据</span><br><span class="line">			page:0,         //当前请求的页数</span><br><span class="line">			size:10,        //每次请求的数量</span><br><span class="line">			total: 110      //数据总条数</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">	componentDidMount() &#123;</span><br><span class="line">		this.getData(this.state.page, this.state.size);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	refreshCallback() &#123;</span><br><span class="line">		let &#123; stores, total, size &#125; = this.state;</span><br><span class="line">		return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">			setTimeout(() =&gt; &#123;</span><br><span class="line">				let result = false;</span><br><span class="line">				if (Math.random() &gt; 0.1) &#123;</span><br><span class="line">					result = true;</span><br><span class="line">				&#125;</span><br><span class="line">				if (result) &#123;</span><br><span class="line">					this.setState(&#123;</span><br><span class="line">						page: 0,</span><br><span class="line">						hasMore: stores.length &lt;= total</span><br><span class="line">					&#125;, () =&gt; &#123;</span><br><span class="line">						this.getData(this.state.page, size);</span><br><span class="line">						resolve();</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125; else &#123;</span><br><span class="line">					reject(new Error(&apos;错误&apos;));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;, 1000);</span><br><span class="line">		&#125;).then(() =&gt; &#123;</span><br><span class="line">			console.info(&apos;刷新成功！&apos;);</span><br><span class="line">		&#125;, () =&gt; &#123;</span><br><span class="line">			console.info(&apos;刷新失败！&apos;);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	loadMoreCallback = () =&gt; &#123;</span><br><span class="line">		let &#123; stores, total, size &#125; = this.state;</span><br><span class="line">		return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">			setTimeout(() =&gt; &#123;</span><br><span class="line">				let result = false;</span><br><span class="line">				if (Math.random() &gt; 0.1) &#123;</span><br><span class="line">					result = true;</span><br><span class="line">				&#125;</span><br><span class="line">				if (result) &#123;</span><br><span class="line">					this.setState(&#123;</span><br><span class="line">						page: this.state.page + 1,</span><br><span class="line">						hasMore: stores.length &lt;= total</span><br><span class="line">					&#125;, () =&gt; &#123;</span><br><span class="line">						this.getData(this.state.page, size);</span><br><span class="line">						resolve();</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125; else &#123;</span><br><span class="line">					reject(new Error(&apos;错误&apos;));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;, 1000);</span><br><span class="line">		&#125;).then(() =&gt; &#123;</span><br><span class="line">			console.info(&apos;加载更多成功！&apos;);</span><br><span class="line">		&#125;, () =&gt; &#123;</span><br><span class="line">			console.info(&apos;加载更多失败！&apos;);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	getData(page,size) &#123;</span><br><span class="line">		var self = this;</span><br><span class="line">		let params = &#123;</span><br><span class="line">			page: this.state.page,</span><br><span class="line">			size: this.state.size</span><br><span class="line">		&#125;;</span><br><span class="line">		let stores = [];</span><br><span class="line"></span><br><span class="line">		HttpUtil.fetchPost(</span><br><span class="line">			url,</span><br><span class="line">			params,</span><br><span class="line">			(jsonData) =&gt; &#123;</span><br><span class="line">			   if(jsonData.code === 0)&#123;</span><br><span class="line">				   if(page === 0)&#123;</span><br><span class="line">					   self.setState(&#123;</span><br><span class="line">						   stores: jsonData.res.data.record,</span><br><span class="line">						   total: jsonData.res.data.total  //这个必须要，这个是数据的总条数</span><br><span class="line">					   &#125;)</span><br><span class="line">				   &#125;else&#123;</span><br><span class="line">					   self.setState(&#123;</span><br><span class="line">						   stores: self.state.stores.concat(jsonData.res.data.record),</span><br><span class="line">						   total: jsonData.res.data.total  //这个必须要，这个是数据的总条数</span><br><span class="line">					   &#125;)</span><br><span class="line">				   &#125;</span><br><span class="line">			   &#125;</span><br><span class="line">			&#125;,</span><br><span class="line">			(err) =&gt; &#123;</span><br><span class="line">			&#125;</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render()&#123;</span><br><span class="line">		const &#123; hasMore, stores &#125; = this.state;</span><br><span class="line"></span><br><span class="line">		const props = &#123;</span><br><span class="line">			maxAmplitude: 80,</span><br><span class="line">			debounceTime: 30,</span><br><span class="line">			throttleTime: 100,</span><br><span class="line">			deceleration: 0.001,</span><br><span class="line">			refreshCallback: this.refreshCallback.bind(this),</span><br><span class="line">			loadMoreCallback: this.loadMoreCallback.bind(this),</span><br><span class="line">			hasMore</span><br><span class="line">		&#125;;</span><br><span class="line">		return (</span><br><span class="line">			&lt;div className=&quot;list&quot;&gt;</span><br><span class="line">				&lt;PullRefresh&#123;...props&#125;&gt;</span><br><span class="line">				&#123;</span><br><span class="line">					stores.map((data,i) =&gt; &#123;</span><br><span class="line">						return    &lt;div className=&quot;duc_list&quot; key=&#123;i&#125; &gt;</span><br><span class="line">						   &lt;h3 className=&quot;list_name&quot; &gt;&#123;data.villageName&#125;&lt;/h3&gt;</span><br><span class="line">							&lt;div className=&quot;list_info&quot;&gt;</span><br><span class="line">								&lt;img className=&quot;list_img&quot; src=&quot;http://121.40.178.164:4040/react-res/public/uploads/banner/8a2f424c58fd4e9e0158fd6aa04a002c/11.jpg&quot; alt=&quot;&quot;/&gt;</span><br><span class="line">								&lt;div className=&quot;list_rent&quot;&gt;¥&lt;span&gt;&#123;data.salePrice&#125;&lt;/span&gt;/月&lt;/div&gt;</span><br><span class="line">								&lt;div className=&quot;list_rom&quot;&gt;</span><br><span class="line">									&lt;span className=&quot;list_rom_area&quot;&gt;&lt;span&gt;&#123;data.room&#125;&lt;/span&gt;室 &lt;span&gt;&#123;data.hall&#125;&lt;/span&gt;厅 &lt;span&gt;&#123;data.useArea&#125;&lt;/span&gt;㎡&lt;/span&gt;</span><br><span class="line">									&lt;span className=&quot;list_avage&quot;&gt;&#123;data.advantage&#125;&lt;/span&gt;</span><br><span class="line">								&lt;/div&gt;</span><br><span class="line">							&lt;/div&gt;</span><br><span class="line">							&lt;div className=&quot;list_address&quot;&gt;</span><br><span class="line">								&lt;img</span><br><span class="line">									src=&#123;require(&apos;../images/sub-icon.png&apos;)&#125;</span><br><span class="line"></span><br><span class="line">								/&gt;</span><br><span class="line">								&lt;span className=&quot;list_address_info&quot;&gt;&#123;data.address&#125;&lt;/span&gt;</span><br><span class="line">							&lt;/div&gt;</span><br><span class="line">						&lt;/div&gt;</span><br><span class="line">					&#125;)</span><br><span class="line">				&#125;</span><br><span class="line">				&lt;div className=&quot;line&quot;&gt;&lt;/div&gt;</span><br><span class="line">			   &lt;/PullRefresh&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/android_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/android_01/" class="post-title-link" itemprop="url">Android版本名称、版本号、API level对应关系</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:47:59" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <table>
-<thead>
-<tr>
-<th>-</th>
-<th>Code name</th>
-<th>Version</th>
-<th>API level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>no code name</td>
-<td>1.0</td>
-<td>API level 1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>no code name</td>
-<td>1.1</td>
-<td>API level 2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Cupcake</td>
-<td>1.5</td>
-<td>API level 3,NDK 1</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Donut</td>
-<td>1.6</td>
-<td>API level 4,NDK 2</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Eclair</td>
-<td>2.0</td>
-<td>API level 5</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Eclair</td>
-<td>2.0.1</td>
-<td>API level 6</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Eclair</td>
-<td>2.1</td>
-<td>API level 7,NDK3</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Froyo</td>
-<td>2.2.x</td>
-<td>API level 8,NDK 4</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Gingerbread</td>
-<td>2.3-2.3.2</td>
-<td>API level 9,NDK5</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Gingerbread</td>
-<td>2.3.3-2.3.7</td>
-<td>API level 10</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Honeycomb</td>
-<td>3.0</td>
-<td>API level 11</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Honeycomb</td>
-<td>3.1</td>
-<td>API level 12,NDK 6</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Honeycomb</td>
-<td>3.2x</td>
-<td>API level 13</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Ice Cream Sandwich</td>
-<td>4.0.1-4.0.2</td>
-<td>API level 14,NDK 7</td>
-</tr>
-<tr>
-<td>15</td>
-<td>Ice Cream Sandwich</td>
-<td>4.0.3-4.0.4</td>
-<td>API level 15,NDK 8</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Jelly Bean</td>
-<td>4.1x</td>
-<td>API level 16</td>
-</tr>
-<tr>
-<td>17</td>
-<td>Jelly Bean</td>
-<td>4.2x</td>
-<td>API level 17</td>
-</tr>
-<tr>
-<td>18</td>
-<td>Jelly Bean</td>
-<td>4.3x</td>
-<td>API level 18</td>
-</tr>
-<tr>
-<td>19</td>
-<td>Jelly Bean</td>
-<td>4.4-4.4.4</td>
-<td>API level 19</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Lollipop</td>
-<td>5.0</td>
-<td>API level 21</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Lollipop</td>
-<td>5.1</td>
-<td>API level 22</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Marshmallow</td>
-<td>6.0</td>
-<td>API level 23</td>
-</tr>
-<tr>
-<td>23</td>
-<td>Nougat</td>
-<td>7.0</td>
-<td>API level 24</td>
-</tr>
-<tr>
-<td>24</td>
-<td>Nougat</td>
-<td>7.1.1</td>
-<td>API level 25</td>
-</tr>
-</tbody>
-</table>
+            <p>React Native项目在64位Android手机上运行，会提示<br>“/data/data/com.xxx.xxx/lib-main/libgnustl_shared.so”is 32-bit instead of 64-bit这个错误。</p>
+<p>解决方法就是取消掉所有64位的.so文件，全部加载32位的就可以了，下面是步骤</p>
+<ol>
+<li>在项目的根部录的gradle.properties里面添加一行代码，android.useDeprecatedNdk = true.</li>
+<li>在build.gradle文件里添加以下代码：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">	...</span><br><span class="line">	defaultConfig &#123;</span><br><span class="line">		...</span><br><span class="line">		ndk &#123;</span><br><span class="line">			abiFilters: &quot;armeabi-v7a&quot;,&quot;x86&quot;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		packagingOptions &#123;</span><br><span class="line">			exclude &quot;lib/arm64-v8a/librealm-jni.so&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1294,848 +1939,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/css_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/css_01/" class="post-title-link" itemprop="url">css3隔行变色</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-17 16:46:05" itemprop="dateModified" datetime="2019-01-17T16:46:05+08:00">2019-01-17</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">div:nth-of-type(odd)&#123;background:#fff&#125;  /*奇数行*/</span><br><span class="line"></span><br><span class="line">div:nth-of-type(even)&#123;background:#000&#125;   /*偶数行 */</span><br><span class="line"></span><br><span class="line">div:nth-child(4n+1)&#123;background:#fff&#125;  /*从第一行开始算起 每隔四个（包含第四个）使用此样式*/</span><br><span class="line"></span><br><span class="line">div:nth-child(4n+2)&#123;background:#fff&#125;  /*从第二行开始算起 每隔四个（包含第四个）使用此样式*/</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-child(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是你北朝鲜绵第n个子元素.n可以是数字(1,2,3),关键字(odd,even),公式(2n,2n+3),数字是从1开始的,不是0.如:</span><br><span class="line"></span><br><span class="line">tr:nth-child(3)匹配所有表格里第3行的tr</span><br><span class="line"></span><br><span class="line">tr:nth-child(2n+1)匹配所有表格的奇数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(2n)匹配所有的偶数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(odd)匹配所有的奇数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(even)匹配所有的偶数行</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-last-child(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素的倒数第n个子元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-of-type(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素所有子元素中类型为E的子元素集合中的第n个,n可以是数字(1,2,3),关键字(odd,even),公式(2n,2n+3),数字是从1开始的,不是0.如p:nth-of-type(2)匹配出,&amp;lt;div&amp;gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中第二个p元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-last-of-type(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素的倒数第n个子节点</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:last-child&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中的最后一个字节点</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:first-of-tpe&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中是第一个该类型的元素,如p:first-of-type匹配&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;中的第一个p元素.</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:last-of-type&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中的最后一个该类型的元素.如:p:last-of-type匹配,&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中的最后一个p元素,它同E:nth-last-of-tpe(1)意义相同</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:only-child&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出父元素中只包括一个的子元素,且该元素是E</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:only-of-type&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择其父元素只包含一个同类型的子元素,且该子元素匹配E.如p:only-of-type匹配&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中的p,因为div中只包括一个p元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:empty&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">匹配E元素,且该元素不包含子节点,注意,文字也属于节点</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/mac_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/mac_01/" class="post-title-link" itemprop="url">Mac显示隐藏文件</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:18:29" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h5><p>在macOS Sierra, 我们可以使用快捷键⌘⇧.(Command + Shift + .)来快速(在Finder中)显示和隐藏文件</p>
-<h5 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h5><p>在终端使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//显示隐藏文件</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool true</span><br><span class="line">//不显示隐藏文件</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool false</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/bootstrap/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/bootstrap/" class="post-title-link" itemprop="url">解决bootstrap模态框切换时页面抖动or页面滚动条</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-17 16:56:26" itemprop="dateModified" datetime="2019-01-17T16:56:26+08:00">2019-01-17</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Bootstrap/" itemprop="url" rel="index"><span itemprop="name">Bootstrap</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Bootstrap为了让所有的页面(这里指内容溢出和不溢出)显示效果一样，采取的方法如下:<br></p>
-<p>当Modal显示时，设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    margin-right: 15px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>(设置15px是因为浏览器的滚动条占位时15px)<br></p>
-<p>在modal显示时给body添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.modal-open &#123;</span><br><span class="line">    overflow: auto;</span><br><span class="line">    overflow-y: scroll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样设置的效果是：<br></p>
-<p>1、当页面内容超出(即页面本身存在滚动条)，则modal弹出后，原body滚动禁止，body的margin-right和modal的滚动条位置重叠，此时页面是不会出现抖动现象的。<br><br>2、当页面内容未超出(即页面本身不存在滚动条)，则modal弹出后，由于body设置了margin-right，会使得页面向左偏移，当modal关闭后，body的margin-right为0，页面向右偏移，就出现页面抖动。<br></p>
-<p>根据上面的描述，解决页面抖动的思路是：<br></p>
-<p>根据scrollHeight和clientHeight，分别在modal加载前和关闭时调整body的overflow、margin-right和.modal的overflow属性，以覆盖bootstrap.css中的样式<br></p>
-<p>函数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//解决Modal弹出时页面左右移动问题</span><br><span class="line"></span><br><span class="line">最佳的办法应该是CSS：</span><br><span class="line">引用@僵叔叔的答案：body&#123; overflow: auto !important;&#125; .modal&#123; overflow: auto !important;&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/react_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/react_01/" class="post-title-link" itemprop="url">React下拉刷新</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48 / Modified: 17:10:19" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;;</span><br><span class="line">import HttpUtil  from  &apos;../common/common&apos;</span><br><span class="line">import PullRefresh from &apos;reactjs-pull-refresh&apos;</span><br><span class="line"></span><br><span class="line">export default class NewList extends Component&#123;</span><br><span class="line">	constructor(props)&#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state=&#123;</span><br><span class="line">			hasMore: true,  //是否加载更多</span><br><span class="line">			stores: [],     //数据</span><br><span class="line">			page:0,         //当前请求的页数</span><br><span class="line">			size:10,        //每次请求的数量</span><br><span class="line">			total: 110      //数据总条数</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">	componentDidMount() &#123;</span><br><span class="line">		this.getData(this.state.page, this.state.size);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	refreshCallback() &#123;</span><br><span class="line">		let &#123; stores, total, size &#125; = this.state;</span><br><span class="line">		return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">			setTimeout(() =&gt; &#123;</span><br><span class="line">				let result = false;</span><br><span class="line">				if (Math.random() &gt; 0.1) &#123;</span><br><span class="line">					result = true;</span><br><span class="line">				&#125;</span><br><span class="line">				if (result) &#123;</span><br><span class="line">					this.setState(&#123;</span><br><span class="line">						page: 0,</span><br><span class="line">						hasMore: stores.length &lt;= total</span><br><span class="line">					&#125;, () =&gt; &#123;</span><br><span class="line">						this.getData(this.state.page, size);</span><br><span class="line">						resolve();</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125; else &#123;</span><br><span class="line">					reject(new Error(&apos;错误&apos;));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;, 1000);</span><br><span class="line">		&#125;).then(() =&gt; &#123;</span><br><span class="line">			console.info(&apos;刷新成功！&apos;);</span><br><span class="line">		&#125;, () =&gt; &#123;</span><br><span class="line">			console.info(&apos;刷新失败！&apos;);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	loadMoreCallback = () =&gt; &#123;</span><br><span class="line">		let &#123; stores, total, size &#125; = this.state;</span><br><span class="line">		return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">			setTimeout(() =&gt; &#123;</span><br><span class="line">				let result = false;</span><br><span class="line">				if (Math.random() &gt; 0.1) &#123;</span><br><span class="line">					result = true;</span><br><span class="line">				&#125;</span><br><span class="line">				if (result) &#123;</span><br><span class="line">					this.setState(&#123;</span><br><span class="line">						page: this.state.page + 1,</span><br><span class="line">						hasMore: stores.length &lt;= total</span><br><span class="line">					&#125;, () =&gt; &#123;</span><br><span class="line">						this.getData(this.state.page, size);</span><br><span class="line">						resolve();</span><br><span class="line">					&#125;);</span><br><span class="line">				&#125; else &#123;</span><br><span class="line">					reject(new Error(&apos;错误&apos;));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;, 1000);</span><br><span class="line">		&#125;).then(() =&gt; &#123;</span><br><span class="line">			console.info(&apos;加载更多成功！&apos;);</span><br><span class="line">		&#125;, () =&gt; &#123;</span><br><span class="line">			console.info(&apos;加载更多失败！&apos;);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	getData(page,size) &#123;</span><br><span class="line">		var self = this;</span><br><span class="line">		let params = &#123;</span><br><span class="line">			page: this.state.page,</span><br><span class="line">			size: this.state.size</span><br><span class="line">		&#125;;</span><br><span class="line">		let stores = [];</span><br><span class="line"></span><br><span class="line">		HttpUtil.fetchPost(</span><br><span class="line">			url,</span><br><span class="line">			params,</span><br><span class="line">			(jsonData) =&gt; &#123;</span><br><span class="line">			   if(jsonData.code === 0)&#123;</span><br><span class="line">				   if(page === 0)&#123;</span><br><span class="line">					   self.setState(&#123;</span><br><span class="line">						   stores: jsonData.res.data.record,</span><br><span class="line">						   total: jsonData.res.data.total  //这个必须要，这个是数据的总条数</span><br><span class="line">					   &#125;)</span><br><span class="line">				   &#125;else&#123;</span><br><span class="line">					   self.setState(&#123;</span><br><span class="line">						   stores: self.state.stores.concat(jsonData.res.data.record),</span><br><span class="line">						   total: jsonData.res.data.total  //这个必须要，这个是数据的总条数</span><br><span class="line">					   &#125;)</span><br><span class="line">				   &#125;</span><br><span class="line">			   &#125;</span><br><span class="line">			&#125;,</span><br><span class="line">			(err) =&gt; &#123;</span><br><span class="line">			&#125;</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render()&#123;</span><br><span class="line">		const &#123; hasMore, stores &#125; = this.state;</span><br><span class="line"></span><br><span class="line">		const props = &#123;</span><br><span class="line">			maxAmplitude: 80,</span><br><span class="line">			debounceTime: 30,</span><br><span class="line">			throttleTime: 100,</span><br><span class="line">			deceleration: 0.001,</span><br><span class="line">			refreshCallback: this.refreshCallback.bind(this),</span><br><span class="line">			loadMoreCallback: this.loadMoreCallback.bind(this),</span><br><span class="line">			hasMore</span><br><span class="line">		&#125;;</span><br><span class="line">		return (</span><br><span class="line">			&lt;div className=&quot;list&quot;&gt;</span><br><span class="line">				&lt;PullRefresh&#123;...props&#125;&gt;</span><br><span class="line">				&#123;</span><br><span class="line">					stores.map((data,i) =&gt; &#123;</span><br><span class="line">						return    &lt;div className=&quot;duc_list&quot; key=&#123;i&#125; &gt;</span><br><span class="line">						   &lt;h3 className=&quot;list_name&quot; &gt;&#123;data.villageName&#125;&lt;/h3&gt;</span><br><span class="line">							&lt;div className=&quot;list_info&quot;&gt;</span><br><span class="line">								&lt;img className=&quot;list_img&quot; src=&quot;http://121.40.178.164:4040/react-res/public/uploads/banner/8a2f424c58fd4e9e0158fd6aa04a002c/11.jpg&quot; alt=&quot;&quot;/&gt;</span><br><span class="line">								&lt;div className=&quot;list_rent&quot;&gt;¥&lt;span&gt;&#123;data.salePrice&#125;&lt;/span&gt;/月&lt;/div&gt;</span><br><span class="line">								&lt;div className=&quot;list_rom&quot;&gt;</span><br><span class="line">									&lt;span className=&quot;list_rom_area&quot;&gt;&lt;span&gt;&#123;data.room&#125;&lt;/span&gt;室 &lt;span&gt;&#123;data.hall&#125;&lt;/span&gt;厅 &lt;span&gt;&#123;data.useArea&#125;&lt;/span&gt;㎡&lt;/span&gt;</span><br><span class="line">									&lt;span className=&quot;list_avage&quot;&gt;&#123;data.advantage&#125;&lt;/span&gt;</span><br><span class="line">								&lt;/div&gt;</span><br><span class="line">							&lt;/div&gt;</span><br><span class="line">							&lt;div className=&quot;list_address&quot;&gt;</span><br><span class="line">								&lt;img</span><br><span class="line">									src=&#123;require(&apos;../images/sub-icon.png&apos;)&#125;</span><br><span class="line"></span><br><span class="line">								/&gt;</span><br><span class="line">								&lt;span className=&quot;list_address_info&quot;&gt;&#123;data.address&#125;&lt;/span&gt;</span><br><span class="line">							&lt;/div&gt;</span><br><span class="line">						&lt;/div&gt;</span><br><span class="line">					&#125;)</span><br><span class="line">				&#125;</span><br><span class="line">				&lt;div className=&quot;line&quot;&gt;&lt;/div&gt;</span><br><span class="line">			   &lt;/PullRefresh&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/rn_01/" class="post-title-link" itemprop="url">React Naitve 性能优化</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:39:44" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="1、利用shouldComponentUpdate函数优化react性能以及引入immutable库的必要性-也适用于react-native"><a href="#1、利用shouldComponentUpdate函数优化react性能以及引入immutable库的必要性-也适用于react-native" class="headerlink" title="1、利用shouldComponentUpdate函数优化react性能以及引入immutable库的必要性(也适用于react-native)"></a>1、利用shouldComponentUpdate函数优化react性能以及引入immutable库的必要性(也适用于react-native)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setState()函数在任何情况下都会导致组件重渲染吗？如果setState()中参数还是原来没有发生任何变化的staten？</span><br><span class="line">如果组件的state没有变化，并且从父组件接收的props也没有变化，那它就一定不会重渲染吗？</span><br><span class="line">如果1，2两种情况下都会导致重渲染，我们该如何避免这种冗杂的操作，从而优化性能？</span><br></pre></td></tr></table></figure>
-<p>参考 <a href="https://www.cnblogs.com/penghuwan/p/6707254.html" target="_blank" rel="noopener">https://www.cnblogs.com/penghuwan/p/6707254.html</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2183,7 +1986,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2212,7 +2015,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
@@ -2253,7 +2062,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
