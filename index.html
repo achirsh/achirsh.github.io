@@ -317,6 +317,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2020/03/11/react_03/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/03/11/react_03/" class="post-title-link" itemprop="url">react 上传图片裁剪</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-03-11 15:05:01 / Modified: 15:05:33" itemprop="dateCreated datePublished" datetime="2020-03-11T15:05:01+08:00">2020-03-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line">import Cropper from &quot;react-cropper&quot;;</span><br><span class="line">import &quot;cropperjs/dist/cropper.css&quot;;</span><br><span class="line"></span><br><span class="line">public cropperModal() &#123;</span><br><span class="line">    return &lt;div className=&#123;styles[&quot;class-cropper-modal&quot;]&#125;&gt;</span><br><span class="line">        &lt;div className=&#123;styles[&quot;modal-panel&quot;]&#125;&gt;</span><br><span class="line">            &lt;div className=&#123;styles[&quot;cropper-container-container&quot;]&#125;&gt;</span><br><span class="line">                &lt;div className=&#123;styles[&quot;cropper-container&quot;]&#125;&gt;</span><br><span class="line">                    &lt;Cropper</span><br><span class="line">                        src=&#123;this.state.src&#125;</span><br><span class="line">                        className=&quot;cropper&quot;</span><br><span class="line">                        ref=&quot;cropper&quot;</span><br><span class="line">                        viewMode=&#123;1&#125;</span><br><span class="line">                        movable=&#123;false&#125;</span><br><span class="line">                        zoomable=&#123;false&#125;  // 是否允许放大图像</span><br><span class="line">                        aspectRatio=&#123;1&#125; // 固定为1:1  可以自己设置比例, 默认情况为自由比例</span><br><span class="line">                        guides=&#123;true&#125;</span><br><span class="line">                        background=&#123;false&#125; // 是否显示背景的马赛克</span><br><span class="line">                        rotatable=&#123;false&#125; // 是否旋转</span><br><span class="line">                        preview=&quot;.cropper-preview&quot;</span><br><span class="line">                        cropBoxResizable=&#123;false&#125;</span><br><span class="line">                        style=&#123;&#123; height: &quot;100%&quot;, width: CLIENTWIDTH &#125;&#125;</span><br><span class="line">                    /&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                &lt;div className=&#123;styles[&quot;preview-container&quot;]&#125;&gt;</span><br><span class="line">                    &lt;div className=&#123;styles[&quot;cropper-preview&quot;]&#125; /&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                &lt;div style=&#123;&#123;</span><br><span class="line">                    position: &quot;fixed&quot;, right: &quot;10px&quot;, top: &quot;10px&quot;,</span><br><span class="line">                    width: &quot;60px&quot;, height: &quot;30px&quot;, backgroundColor: &quot;rgb(255, 166, 54)&quot;,</span><br><span class="line">                    color: &quot;#fff&quot;, borderRadius: &quot;4px&quot;, display: &quot;flex&quot;,</span><br><span class="line">                    alignItems: &quot;center&quot;, justifyContent: &quot;center&quot;,</span><br><span class="line">                &#125;&#125; onClick=&#123;this.handleSubmit.bind(this)&#125;&gt;</span><br><span class="line">                    保存</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public async handleSubmit() &#123;</span><br><span class="line">    (this.refs.cropper as any).getCroppedCanvas().toBlob(async blob =&gt; &#123;</span><br><span class="line">       // 上传操作</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.class-cropper-modal &#123;</span><br><span class="line">    position: fixed;</span><br><span class="line">    background-color: rgba(0, 0, 0, 0.3);</span><br><span class="line">    top: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.modal-panel &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">    background: white;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    align-items: stretch;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cropper-container-container &#123;</span><br><span class="line">    flex: 1;</span><br><span class="line">    display: flex;</span><br><span class="line">    align-items: stretch;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cropper-container &#123;</span><br><span class="line">    flex: 0 0 600px;</span><br><span class="line">    margin-right: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cropper-container img &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cropper &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.preview-container &#123;</span><br><span class="line">    flex: 1;</span><br><span class="line">    display: flex;</span><br><span class="line">    align-items: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.cropper-preview &#123;</span><br><span class="line">    width: 180px;</span><br><span class="line">    height: 180px;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    border: 1px solid #383838;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2020/02/07/js_02/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1609,7 +1769,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_02/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/mac_01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="achirsh">
@@ -1629,7 +1789,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/01/15/rn_02/" class="post-title-link" itemprop="url">React Native解决'libgnustl_shared.so is 32-bit instead if 64-bit'报错</a>
+                <a href="/2019/01/15/mac_01/" class="post-title-link" itemprop="url">Mac显示隐藏文件</a>
               
             
           </h1>
@@ -1654,7 +1814,7 @@
                 
               
 
-              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:42:30" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
+              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:18:29" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
             
 
             
@@ -1676,7 +1836,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a></span>
 
                 
                 
@@ -1713,192 +1873,9 @@
       
         
           
-            <p>React Native项目在64位Android手机上运行，会提示<br>“/data/data/com.xxx.xxx/lib-main/libgnustl_shared.so”is 32-bit instead of 64-bit这个错误。</p>
-<p>解决方法就是取消掉所有64位的.so文件，全部加载32位的就可以了，下面是步骤</p>
-<ol>
-<li>在项目的根部录的gradle.properties里面添加一行代码，android.useDeprecatedNdk = true.</li>
-<li>在build.gradle文件里添加以下代码：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">	...</span><br><span class="line">	defaultConfig &#123;</span><br><span class="line">		...</span><br><span class="line">		ndk &#123;</span><br><span class="line">			abiFilters: &quot;armeabi-v7a&quot;,&quot;x86&quot;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		packagingOptions &#123;</span><br><span class="line">			exclude &quot;lib/arm64-v8a/librealm-jni.so&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/css_02/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/css_02/" class="post-title-link" itemprop="url">超过固定宽度(或行数)显示...(或省略)</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-18 14:34:57" itemprop="dateModified" datetime="2019-01-18T14:34:57+08:00">2019-01-18</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>作为前端经常遇到的一个需求。对于一些比较长的文本做限制，不显示，或者显示省略号。今天整理一下。</p>
-<h3 id="1、超出固定长度显示…"><a href="#1、超出固定长度显示…" class="headerlink" title="1、超出固定长度显示…"></a>1、超出固定长度显示…</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.class &#123;</span><br><span class="line">    width: 400px;</span><br><span class="line">    overflow: hidden; //这个是设置隐藏的。还有其他的，例如scroll，是超出固定长度，底部显示滚动条的。</span><br><span class="line">    text-overflow: ellipsis; //这个就是设置直接隐藏掉文字，还是显示...的。当前是显示省略号，直接省略是clip。</span><br><span class="line">    display: inline-block; //根据不同标签display值，有的不用加</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2、超出固定行数显示…"><a href="#2、超出固定行数显示…" class="headerlink" title="2、超出固定行数显示…"></a>2、超出固定行数显示…</h3><p>超出固定行数。显示省略号，和上面差不多。overflow和text-overflow见上方解释。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.class &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    -webkit-line-clamp: 2; //这里就是设置超出几行隐藏</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    display: -webkit-box; //根据不同标签display，有的不用加。或者设置成别的属性，自己可以随便试试</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="巨坑提醒-多行隐藏"><a href="#巨坑提醒-多行隐藏" class="headerlink" title="巨坑提醒(多行隐藏)"></a>巨坑提醒(多行隐藏)</h4><p>有的时候，你按照上面的设置。就是不生效。或者本地生效了，react（或者vue）打包到服务器上就不生效了。你可以在控制台看看。是不是-webkit-box-orient这个属性消失了。如果是这样的话，请看下面的解决方法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//办法1</span><br><span class="line">直接在style里面写上display: -webkit-box; 就行</span><br><span class="line"></span><br><span class="line">//办法2</span><br><span class="line">.class &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    text-overflow: ellipsis;</span><br><span class="line">    -webkit-line-clamp: 2;</span><br><span class="line">    /* autoprefixer: off */     //对，就是加这两个注释就行.</span><br><span class="line">    -webkit-box-orient: vertical;</span><br><span class="line">    /* autoprefixer: on */</span><br><span class="line">    display:-webkit-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <h5 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h5><p>在macOS Sierra, 我们可以使用快捷键⌘⇧.(Command + Shift + .)来快速(在Finder中)显示和隐藏文件</p>
+<h5 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h5><p>在终端使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//显示隐藏文件</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool true</span><br><span class="line">//不显示隐藏文件</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool false</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1986,7 +1963,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
