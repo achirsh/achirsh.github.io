@@ -317,6 +317,329 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2020/04/23/npm_01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/04/23/npm_01/" class="post-title-link" itemprop="url">发布npm包</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-04-23 15:53:39 / Modified: 15:55:43" itemprop="dateCreated datePublished" datetime="2020-04-23T15:53:39+08:00">2020-04-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/npm/" itemprop="url" rel="index"><span itemprop="name">npm</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1、注册账号</span><br><span class="line">    - 进入网址: https://www.npmjs.com 注册一个npm账号。</span><br><span class="line">    - 进邮箱验证npm账号(否则发布会报错)</span><br><span class="line"></span><br><span class="line">2、创建一个简单的npm包</span><br><span class="line">    2-1、在本地创建一个文件夹：如：achirsh-demo（注意名字应该是npm</span><br><span class="line">        上没有的，可以在npm上搜索一下看你命的名字是否存在）</span><br><span class="line">    2-2、cd进入该文件夹</span><br><span class="line">    2-3、初始化项目，执行 npm init -y 得到package.json文件</span><br><span class="line">    2-4、在文件夹jiang-model中创建名为index.js的文件</span><br><span class="line">    2-5、创建README.md文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;jiang-model&quot;,//发布的包名，默认是上级文件夹名。不得与现在npm中的包名重复。包名不能有大写字母/空格/下滑线!</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,//默认版本号</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,//项目简介</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,//入口文件，默认是Index.js，可以修改成自己的文件 </span><br><span class="line">  &quot;scripts&quot;: &#123; //包含各种脚本执行命令</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;keywords&quot;: [],</span><br><span class="line">  &quot;author&quot;: &quot;&quot;,//作者</span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;//开源文件协议</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">3、发布到npm</span><br><span class="line">    3-1、切换下载源 安装 npm install -g nrm</span><br><span class="line">        nrm ls //查看当前的下载源，带*指向的就是当前的下载源，如果为npm则不需要切换</span><br><span class="line">        nrm use npm //切换到npm的下载源</span><br><span class="line">    3-2、连接npm账户</span><br><span class="line">        3-2-1、如果是本机第一次发布npm包</span><br><span class="line">               在终端中运行命令：npm addUser 提示输入账号，密码和邮箱，然后将提示创建成功</span><br><span class="line">        3-2-2、非第一次发布npm包</span><br><span class="line">               在终端输入npm login，然后输入你创建的账号和密码，和邮箱，登陆</span><br><span class="line">    3-3、发布npm包</span><br><span class="line">         npm publish</span><br><span class="line">    3-4、更新npm发布后的包</span><br><span class="line">         更新npm包也是使用npm publish命令发布，不过必须更改npm包的版本号，也就是package.json中的version字段，否则会报错</span><br><span class="line">    3-5、撤销命令 （一般是慎重撤销）         </span><br><span class="line">         npm unpublish 包名@版本号 --force</span><br><span class="line">         eg:npm unpublish testtoast@1.0.0 --force</span><br><span class="line">         说明：撤销发布的包被认为是一种不好的行为，因为如果有团队使用和依赖你的包时，撤销便会造成很大的影响。</span><br><span class="line">         1.根据规范，只有在发包的24小时内才允许撤销发布的包</span><br><span class="line">         2.即使你撤销了发布的包，发包的时候也不能再和被撤销的包的名称和版本重复了（即不能名称相同，版本相同，因为这两者构成的唯一标识已经被“占用”了）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">可能遇到的错误</span><br><span class="line">1、需要提高版本号</span><br><span class="line"></span><br><span class="line">#1、发包 npm publish 失败</span><br><span class="line">sh-neverleave:z-tool neverleave$ npm publish</span><br><span class="line">npm ERR! publish Failed PUT 400</span><br><span class="line">npm ERR! code E400</span><br><span class="line">npm ERR! deprecations must be strings : z-tool</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     /Users/neverleave/.npm/_logs/2018-11-23T10_52_01_742Z-debug.log</span><br><span class="line">sh-neverleave:z-tool neverleave$ npm publish</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#2、发包 npm publish 失败</span><br><span class="line">sh-neverleave:z-tool neverleave$ npm publish</span><br><span class="line">npm ERR! publish Failed PUT 403</span><br><span class="line">npm ERR! code E403</span><br><span class="line">npm ERR! You cannot publish over the previously published versions: 1.0.3. : z-tool</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     /Users/neverleave/.npm/_logs/2018-11-23T11_24_57_662Z-debug.log</span><br><span class="line">sh-neverleave:z-tool neverleave$ </span><br><span class="line">2、发包 npm publish 失败</span><br><span class="line">解决方案：终端执行： npm publish --access public</span><br><span class="line"></span><br><span class="line">参考：https://stackoverflow.com/questions/53420758/npm-publish-gives-unscoped-packages-cannot-be-private</span><br><span class="line"></span><br><span class="line">#1、发包 npm publish 失败</span><br><span class="line">sh-neverleave:npm neverleave$ npm publish</span><br><span class="line">npm ERR! publish Failed PUT 400</span><br><span class="line">npm ERR! code E400</span><br><span class="line">npm ERR! unscoped packages cannot be private : z-tool</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     /Users/neverleave/.npm/_logs/2018-11-23T08_44_21_310Z-debug.log</span><br><span class="line">sh-neverleave:npm neverleave$ </span><br><span class="line"></span><br><span class="line">#解决方案：终端执行： npm publish --access public</span><br><span class="line">sh-neverleave:npm neverleave$ npm publish --access public</span><br><span class="line">+ z-tool@1.0.0</span><br><span class="line">sh-neverleave:npm neverleave$ </span><br><span class="line">3、确保登录的用户账号正确</span><br><span class="line"></span><br><span class="line">sh-neverleave:npm neverleave$ npm publish</span><br><span class="line">npm ERR! publish Failed PUT 404</span><br><span class="line">npm ERR! code E404</span><br><span class="line">npm ERR! 404 User not found : z-tool</span><br><span class="line">npm ERR! 404 </span><br><span class="line">npm ERR! 404  &apos;z-tool&apos; is not in the npm registry.</span><br><span class="line">npm ERR! 404 You should bug the author to publish it (or use the name yourself!)</span><br><span class="line">npm ERR! 404 </span><br><span class="line">npm ERR! 404 Note that you can also install from a</span><br><span class="line">npm ERR! 404 tarball, folder, http url, or git url.</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     /Users/neverleave/.npm/_logs/2018-11-23T07_32_28_518Z-debug.log</span><br><span class="line">4、登录时需要在username 前加‘~’，具体大家可以验证</span><br><span class="line"></span><br><span class="line">sh-neverleave:npm neverleave$ npm login</span><br><span class="line">Username: (~neverleave) neverleave</span><br><span class="line">Password: (&lt;default hidden&gt;) </span><br><span class="line">Email: (this IS public) (1063588359@qq.com) </span><br><span class="line">npm ERR! code EAUTHIP</span><br><span class="line">npm ERR! Unable to authenticate, need: Basic</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     /Users/neverleave/.npm/_logs/2018-11-23T07_27_50_877Z-debug.log</span><br><span class="line">sh-neverleave:npm neverleave$ </span><br><span class="line">5、无权限删除线上的包（撤包有时间限制，24小时）</span><br><span class="line">解决方案：加上 --force</span><br><span class="line"></span><br><span class="line">sh-neverleave:z-tool neverleave$ npm unpublish z-tool</span><br><span class="line">npm ERR! Refusing to delete entire project.</span><br><span class="line">npm ERR! Run with --force to do this.</span><br><span class="line">npm ERR! npm unpublish [&lt;@scope&gt;/]&lt;pkg&gt;[@&lt;version&gt;]</span><br><span class="line">sh-neverleave:z-tool neverleave$ </span><br><span class="line"></span><br><span class="line">#解决方案（内部有被鄙视的话，😄 I sure hope you know what you are doing.）</span><br><span class="line">sh-neverleave:z-tool neverleave$ npm unpublish z-tool --force</span><br><span class="line">npm WARN using --force I sure hope you know what you are doing.</span><br><span class="line">- z-tool</span><br><span class="line">sh-neverleave:z-tool neverleave$ </span><br><span class="line">6、删除npm市场的包同名的24小时后才能重新发布</span><br><span class="line"></span><br><span class="line">sh-neverleave:z-tool neverleave$ npm publish</span><br><span class="line">npm ERR! publish Failed PUT 403</span><br><span class="line">npm ERR! code E403</span><br><span class="line">npm ERR! z-tool cannot be republished until 24 hours have passed. : z-tool</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     /Users/neverleave/.npm/_logs/2018-11-23T11_41_24_086Z-debug.log</span><br><span class="line">sh-neverleave:z-tool neverleave$</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2020/03/17/js_03/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/03/17/js_03/" class="post-title-link" itemprop="url">js 正则校验</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-03-17 10:28:14 / Modified: 10:32:05" itemprop="dateCreated datePublished" datetime="2020-03-17T10:28:14+08:00">2020-03-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 不允许输入特殊字符</span><br><span class="line">value.replace(/[^u4e00-u9fa5w]/g, &quot;&quot;)</span><br><span class="line">//只允许输入正整数</span><br><span class="line">value.replace(/^(0+)|[^\d]+/g, &quot;&quot;)</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2020/03/11/hexo_01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -362,12 +685,24 @@
                 
               
 
-              <time title="Created: 2020-03-11 15:08:17 / Modified: 15:08:29" itemprop="dateCreated datePublished" datetime="2020-03-11T15:08:17+08:00">2020-03-11</time>
+              <time title="Created: 2020-03-11 15:08:17" itemprop="dateCreated datePublished" datetime="2020-03-11T15:08:17+08:00">2020-03-11</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-04-23 15:53:55" itemprop="dateModified" datetime="2020-04-23T15:53:55+08:00">2020-04-23</time>
               
             
           </span>
@@ -682,12 +1017,24 @@
                 
               
 
-              <time title="Created: 2020-02-07 16:28:50 / Modified: 16:29:16" itemprop="dateCreated datePublished" datetime="2020-02-07T16:28:50+08:00">2020-02-07</time>
+              <time title="Created: 2020-02-07 16:28:50" itemprop="dateCreated datePublished" datetime="2020-02-07T16:28:50+08:00">2020-02-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-03-17 10:28:23" itemprop="dateModified" datetime="2020-03-17T10:28:23+08:00">2020-03-17</time>
               
             
           </span>
@@ -1577,343 +1924,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/04/09/face_02/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/09/face_02/" class="post-title-link" itemprop="url">使用nw.js打包react项目</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-04-09 15:52:30 / Modified: 15:52:39" itemprop="dateCreated datePublished" datetime="2019-04-09T15:52:30+08:00">2019-04-09</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/人脸识别/" itemprop="url" rel="index"><span itemprop="name">人脸识别</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">nw.js原名node-webkit，它通过Chromium内核，可以在node环境下模拟浏览器运行时，因此可以将js封装成独立应用，从而实现跨平台。</span><br><span class="line"></span><br><span class="line">#### nw.js安装</span><br><span class="line">官方地址https://nwjs.io/，选择对应你自己的系统，开发的话可以下载SDK，SDK可以打开控制台，上线之类的可以选择Normal版本。</span><br><span class="line"></span><br><span class="line">#### 准备index.html文件</span><br><span class="line">将react项目build之后，将build目录下的文件拷贝到刚才下载的文件夹里面，和nw.exe同目录</span><br><span class="line"></span><br><span class="line">#### 准备package.json</span><br><span class="line">最后需要新建一个package.json文件，这是nw打包的配置文件和入口文件，最基础的是name，main</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    name: &apos;nwDemo&apos;,</span><br><span class="line">    main: &apos;index.html&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">将package.json文件拷贝到nw.exe同目录下，运行nw.exe即可</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/03/21/face_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/21/face_01/" class="post-title-link" itemprop="url">使用React和face-api.js提供面部识别</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-21 14:47:28" itemprop="dateCreated datePublished" datetime="2019-03-21T14:47:28+08:00">2019-03-21</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-04-09 17:29:27" itemprop="dateModified" datetime="2019-04-09T17:29:27+08:00">2019-04-09</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/人脸识别/" itemprop="url" rel="index"><span itemprop="name">人脸识别</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    face-api.js提供了Tiny Face Detector、SSD mobileNet和MTCNN三种模型，此API人脸识别的原理就是一旦检测到一</span><br><span class="line">个或多个人脸，人脸检测器模型将返回每个人脸的边界框，告诉我们人脸在图像中的位置。然后利用人脸标志网络对人脸标志进行68</span><br><span class="line">个点的标记，在人脸识别网络进行输入前，利用对齐模型确定人脸的中心位置。</span><br><span class="line">    人脸识别网络是另一个神经网络返回一个人脸描述符（特征向量包含128个值），我们可以用它来比较和识别图像中的人。就像</span><br><span class="line">指纹一样，脸部描述符是每个脸部的独特价值。当我们比较它们时，来自不同图像源的同一个人的人脸描述符应该非常接近。在这个</span><br><span class="line">项目中，我们使用欧几里德距离进行比较。如果距离小于我们设定的阈值，我们确定他们可能是同一个人。 （距离越远，信心越高）</span><br><span class="line">    通常，系统将每个人的面部描述符与他或她的名称一起存储为标记。当我们提供查询图像时，系统会将新图像的脸部描述符与所</span><br><span class="line">有参考描述符进行比较，并识别具有最低图像描述符的人。如果没有比较低于阈值的人，则该人将被识别为未知。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">今天这里实现两个功能。一种是从输入图像中识别，另一种是使用实时视频作为输入。</span><br><span class="line">让我们从create-react-app开始，安装react-router-dom，然后启动App</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create-react-app face-demo</span><br><span class="line">cd face-demo</span><br><span class="line">yarn add react-router-dom</span><br><span class="line"></span><br><span class="line">yarn start</span><br><span class="line">这时会自动打开默认的页面</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将src/App.js文件用react-router-dom设置一下</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1961,7 +1971,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1998,7 +2008,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
