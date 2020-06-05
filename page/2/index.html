@@ -317,6 +317,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/04/09/git_01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/09/git_01/" class="post-title-link" itemprop="url">Gitc撤销已经commit但是还没有push的代码</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-09 18:08:23 / Modified: 18:18:18" itemprop="dateCreated datePublished" datetime="2019-04-09T18:08:23+08:00">2019-04-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">在git commit之后，正想着push，突然发现有些东西我们不想push上去</span><br><span class="line">这个时候我们想把提交的撤销掉，重新提交我们想提交的，push我们想要push的</span><br><span class="line">1、找到之前提交的git commit的id</span><br><span class="line">git log </span><br><span class="line">找到想要撤销的id</span><br><span class="line">2、git reset -hard id</span><br><span class="line">完成撤销，同时将代码恢复到前commit_id对应的版本，强制回滚到之前的版本</span><br><span class="line">3、git reset id</span><br><span class="line">完成撤销，停留在当前版本，不对代码修改进行撤销，可以直接通过git commit重新提交对本地代码的修改。</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/04/09/face_02/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -654,7 +814,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_02/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/css_01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="achirsh">
@@ -674,174 +834,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/01/15/rn_02/" class="post-title-link" itemprop="url">React Native解决'libgnustl_shared.so is 32-bit instead if 64-bit'报错</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:42:30" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>React Native项目在64位Android手机上运行，会提示<br>“/data/data/com.xxx.xxx/lib-main/libgnustl_shared.so”is 32-bit instead of 64-bit这个错误。</p>
-<p>解决方法就是取消掉所有64位的.so文件，全部加载32位的就可以了，下面是步骤</p>
-<ol>
-<li>在项目的根部录的gradle.properties里面添加一行代码，android.useDeprecatedNdk = true.</li>
-<li>在build.gradle文件里添加以下代码：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">	...</span><br><span class="line">	defaultConfig &#123;</span><br><span class="line">		...</span><br><span class="line">		ndk &#123;</span><br><span class="line">			abiFilters: &quot;armeabi-v7a&quot;,&quot;x86&quot;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		packagingOptions &#123;</span><br><span class="line">			exclude &quot;lib/arm64-v8a/librealm-jni.so&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/bootstrap/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/bootstrap/" class="post-title-link" itemprop="url">解决bootstrap模态框切换时页面抖动or页面滚动条</a>
+                <a href="/2019/01/15/css_01/" class="post-title-link" itemprop="url">css3隔行变色</a>
               
             
           </h1>
@@ -883,7 +876,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-17 16:56:26" itemprop="dateModified" datetime="2019-01-17T16:56:26+08:00">2019-01-17</time>
+                <time title="Modified: 2019-01-17 16:46:05" itemprop="dateModified" datetime="2019-01-17T16:46:05+08:00">2019-01-17</time>
               
             
           </span>
@@ -900,7 +893,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Bootstrap/" itemprop="url" rel="index"><span itemprop="name">Bootstrap</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a></span>
 
                 
                 
@@ -937,194 +930,7 @@
       
         
           
-            <p>Bootstrap为了让所有的页面(这里指内容溢出和不溢出)显示效果一样，采取的方法如下:<br></p>
-<p>当Modal显示时，设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    margin-right: 15px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>(设置15px是因为浏览器的滚动条占位时15px)<br></p>
-<p>在modal显示时给body添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.modal-open &#123;</span><br><span class="line">    overflow: auto;</span><br><span class="line">    overflow-y: scroll;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样设置的效果是：<br></p>
-<p>1、当页面内容超出(即页面本身存在滚动条)，则modal弹出后，原body滚动禁止，body的margin-right和modal的滚动条位置重叠，此时页面是不会出现抖动现象的。<br><br>2、当页面内容未超出(即页面本身不存在滚动条)，则modal弹出后，由于body设置了margin-right，会使得页面向左偏移，当modal关闭后，body的margin-right为0，页面向右偏移，就出现页面抖动。<br></p>
-<p>根据上面的描述，解决页面抖动的思路是：<br></p>
-<p>根据scrollHeight和clientHeight，分别在modal加载前和关闭时调整body的overflow、margin-right和.modal的overflow属性，以覆盖bootstrap.css中的样式<br></p>
-<p>函数如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//解决Modal弹出时页面左右移动问题</span><br><span class="line"></span><br><span class="line">最佳的办法应该是CSS：</span><br><span class="line">引用@僵叔叔的答案：body&#123; overflow: auto !important;&#125; .modal&#123; overflow: auto !important;&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/react_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/react_01/" class="post-title-link" itemprop="url">React生命周期</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-06-10 14:30:08" itemprop="dateModified" datetime="2019-06-10T14:30:08+08:00">2019-06-10</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">react的生命周期分为四个阶段：初始化阶段、更新阶段、销毁阶段、错误处理阶段</span><br><span class="line"></span><br><span class="line">#### 初始化阶段</span><br><span class="line">- constructor</span><br><span class="line">- static getDerivedStateFromProps</span><br><span class="line">- componentWillMount()</span><br><span class="line">- render</span><br><span class="line">- componentDidmount()</span><br><span class="line"></span><br><span class="line">#### 更新阶段</span><br><span class="line">- componentWillReceiveProps</span><br><span class="line">- static getDerivedStateFromprops()</span><br><span class="line">- shouldComponentUpdate()</span><br><span class="line">- componentWillUpdate()</span><br><span class="line">- render()</span><br><span class="line">- getSnapshotBeforeUpdate()</span><br><span class="line">- componentDidUpdate()</span><br><span class="line"></span><br><span class="line">#### 销毁阶段</span><br><span class="line">- compinentWillUnmount()</span><br><span class="line"></span><br><span class="line">#### 错误处理</span><br><span class="line">- componentDidCatch()</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">初始化阶段详细</span><br><span class="line">#### constructor //自动执行，一开始就会执行</span><br><span class="line"></span><br><span class="line">React组件的构造函数在挂载之前被调用。在实现React.Component构造函数时，需要现在添加其他</span><br><span class="line">内容前，调用super(props)，用来将父组件传来的props绑定到这个类中，使用this.props将会得到。</span><br><span class="line"></span><br><span class="line">步子啊这里生命或者执行事件</span><br><span class="line"></span><br><span class="line">constructor中应当做些初始化的动作，如：初始化state，将时间绑定到类实例上，但也不要使用</span><br><span class="line">setState()。如果没有必要初始化state或绑定方法，则不需要构造constructor，或者把这个组件</span><br><span class="line">换成纯函数写法。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### static getDerivedStateFromProps(nextprops) //自动执行，必须有返回值，输出参数为新值</span><br><span class="line"></span><br><span class="line">getDerivedStateFromProps是react16.3之后新增，在组件实例化后，和接受新的props后被调用。</span><br><span class="line">他必须返回一个对象来更新状态，或者返回null表示新的props不需要任何state的更新。</span><br><span class="line"></span><br><span class="line">如果是由于父组件的props更改，所带来的重新渲染，也会触发此方法。调用setState()不会触发getDerivedStateFromProps()</span><br><span class="line"></span><br><span class="line">之前这里都是使用constructor + componentWillRecieveProps完成相同的功能的</span><br><span class="line"></span><br><span class="line">#### componentWillMount() //render()前调用，可以直接修改state自动执行，即将挂载组件</span><br><span class="line"></span><br><span class="line">componentWillMount()将在React未来版本中被弃用，官方都建议使用componentDidMount()代替。这个</span><br><span class="line">方法是用于在服务器渲染上的唯一方法。这个方法因为是在渲染之前被调用，也是唯一一个可以直接同步修改state的地方</span><br><span class="line"></span><br><span class="line">#### render() //直接执行，必须要有的，一般返回html代码</span><br><span class="line"></span><br><span class="line">render()方法是必需的。当他被调用时，他将计算this.props和this.state，并返回以下一种类型：</span><br><span class="line">1、React元素。通过jsx创建，既可以时dom元素，也可以是用户自定义的组件。</span><br><span class="line">2、字符串或数字。他们将会以文本节点形式渲染到dom中</span><br><span class="line">3、Portals。react 16版本中提出的新的解决方案，可以使组件脱离父组件层级直接挂载在DOM树的任何位置。</span><br><span class="line">4、null，什么也不渲染</span><br><span class="line">5、布尔值。也是什么都不渲染。</span><br><span class="line"></span><br><span class="line">当返回null，false，ReactDOM.findDOMNode(this)将会返回null，什么都不会渲染</span><br><span class="line"></span><br><span class="line">render()方法必须是一个纯函数，他不应该改变state，也不能直接和浏览器进行交互，应该将事件</span><br><span class="line">放在其他生命周期函数中。如果shouldComponentUpdate()返回false，render()不会被调用。</span><br><span class="line"></span><br><span class="line">#### componentDidMount()  //直接执行，可以在这里进行网络请求，第三方实例化，拿到真实</span><br><span class="line">dom，写死的数据可以直接写在这里，如果是获取到的会变得数据，则需要使用定时器，不要的话函数</span><br><span class="line">一直再触发，会导致更新不了视图，需要在dom元素更新完之后执行</span><br><span class="line"></span><br><span class="line">componentDidMount在组件被装配后立即调用。初始化使得DOM节点应该进行到这里</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">更新阶段</span><br><span class="line"></span><br><span class="line">#### componentWillReceiveProps()/UNSAFE_componentWillReceiveProps(nextProps) //改变state或者props时触发</span><br><span class="line"></span><br><span class="line">官方建议使用getDerivedStateFromProps函数替代此函数。当组件挂载后，接收到新的props后</span><br><span class="line">会被调用。如果需要更新state来响应props的更改，则可以进行this.props和nextProps的比较，</span><br><span class="line">并在此方法中使用this.setState()</span><br><span class="line"></span><br><span class="line">如果父组件会让这个组件重新渲染，即使props没有改变，也会调用这个方法</span><br><span class="line"></span><br><span class="line">React不会在组件初始化props时调用这个方法。调用this.setState也不会触发</span><br><span class="line"></span><br><span class="line">#### shouldComponentUpdate(nextprops, nextstate) //参数为新的状态和属性，如果返回值为false，状态</span><br><span class="line">改变，视图不更新，数据改变时触发，性能优化的方法之一</span><br><span class="line"></span><br><span class="line">调用shouldComponentUpdate使React知道，组件的输出是否受state和props的影响。默认每个状</span><br><span class="line">态的更改都会重新渲染，大多数情况下应该保持这个默认行为。</span><br><span class="line"></span><br><span class="line">在渲染新的props或state前，shouldComponentUpdate会被调用。默认为true。这个方法不会在</span><br><span class="line">初始化时被调用，也不会在forceUpdate()时被调用。返回false不会阻止子组件在state更改时重新渲染。</span><br><span class="line"></span><br><span class="line">如果shouldComponentUpdate()返回false，componentWillUpdate,render和componentDidUpdate不会被调用</span><br><span class="line"></span><br><span class="line">UNSAFE_componentWillUpdate(nextprops, nextstate) //渲染新的数据时调用</span><br><span class="line"></span><br><span class="line">在渲染新的state或props时，UNSAFE_componentWillUpdate会被调用，将此作为在更新发生之前</span><br><span class="line">进行准备的机会。这个方法不会在初始化时被调用。</span><br><span class="line"></span><br><span class="line">在这里改变数据会导致死循环，这个函数没有太大的实际作用</span><br><span class="line"></span><br><span class="line">不能在这里使用this.setStae()，也不能做会触发视图更新的操作。如果需要更新state或props，</span><br><span class="line">调用getDerivedFromProps.</span><br><span class="line"></span><br><span class="line">#### getsnapshotBeforeUpdate() //新的数据渲染前调用，可以记录scroll滚动条</span><br><span class="line"></span><br><span class="line">在react render()后的输出被渲染到DOM之前被调用。它使您的组件能够在它们被潜在更改之前捕</span><br><span class="line">获当前值（如滚动位置）。这个生命周期返回的任何值都将作为参数传递给componentDidUpdate()</span><br><span class="line"></span><br><span class="line">#### componentDidUpdate( prevprops,prevstate,snapshot )//第三个参数来自getSnapshopBeforeUpdate()函数的返回值</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">销毁阶段</span><br><span class="line">componentWillUnmount()// 连dom结构都会清除掉</span><br><span class="line"></span><br><span class="line">在组件被卸载并销毁之前立即被调用。在此方法中执行任何必要的清理，例如使定时器无效，取消网</span><br><span class="line">络请求或清理在componentDidMount中创建的任何监听</span><br><span class="line"></span><br><span class="line">componentDidCatch(err, info)</span><br><span class="line"></span><br><span class="line">出错时页面不会崩溃，但是会在控制台输出错误</span><br><span class="line">错误边界是React组件，可以在其子组件树中的任何位置捕获js错误，记录这些错误并显示回退ui，</span><br><span class="line">而不是崩溃的组件树。错误边界在渲染期间生命周期方法以及整个树下的构造函数中捕获错误。</span><br><span class="line"></span><br><span class="line">如果类组件定义了此生命周期方法，则它将成错误边界。在它中调用setState()可以让你在下面</span><br><span class="line">的树中捕获未处理的JavaScript错误，并显示一个后备UI。只能使用错误边界从意外异常中恢复; </span><br><span class="line">不要试图将它们用于控制流程。</span><br><span class="line"></span><br><span class="line">错误边界只会捕获树中下面组件中的错误。错误边界本身不能捕获错误。</span><br></pre></td></tr></table></figure>
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">div:nth-of-type(odd)&#123;background:#fff&#125;  /*奇数行*/</span><br><span class="line"></span><br><span class="line">div:nth-of-type(even)&#123;background:#000&#125;   /*偶数行 */</span><br><span class="line"></span><br><span class="line">div:nth-child(4n+1)&#123;background:#fff&#125;  /*从第一行开始算起 每隔四个（包含第四个）使用此样式*/</span><br><span class="line"></span><br><span class="line">div:nth-child(4n+2)&#123;background:#fff&#125;  /*从第二行开始算起 每隔四个（包含第四个）使用此样式*/</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-child(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是你北朝鲜绵第n个子元素.n可以是数字(1,2,3),关键字(odd,even),公式(2n,2n+3),数字是从1开始的,不是0.如:</span><br><span class="line"></span><br><span class="line">tr:nth-child(3)匹配所有表格里第3行的tr</span><br><span class="line"></span><br><span class="line">tr:nth-child(2n+1)匹配所有表格的奇数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(2n)匹配所有的偶数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(odd)匹配所有的奇数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(even)匹配所有的偶数行</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-last-child(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素的倒数第n个子元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-of-type(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素所有子元素中类型为E的子元素集合中的第n个,n可以是数字(1,2,3),关键字(odd,even),公式(2n,2n+3),数字是从1开始的,不是0.如p:nth-of-type(2)匹配出,&amp;lt;div&amp;gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中第二个p元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-last-of-type(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素的倒数第n个子节点</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:last-child&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中的最后一个字节点</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:first-of-tpe&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中是第一个该类型的元素,如p:first-of-type匹配&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;中的第一个p元素.</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:last-of-type&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中的最后一个该类型的元素.如:p:last-of-type匹配,&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中的最后一个p元素,它同E:nth-last-of-tpe(1)意义相同</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:only-child&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出父元素中只包括一个的子元素,且该元素是E</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:only-of-type&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择其父元素只包含一个同类型的子元素,且该子元素匹配E.如p:only-of-type匹配&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中的p,因为div中只包括一个p元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:empty&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">匹配E元素,且该元素不包含子节点,注意,文字也属于节点</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1359,6 +1165,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/mac_01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/15/mac_01/" class="post-title-link" itemprop="url">Mac显示隐藏文件</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:18:29" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h5><p>在macOS Sierra, 我们可以使用快捷键⌘⇧.(Command + Shift + .)来快速(在Finder中)显示和隐藏文件</p>
+<h5 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h5><p>在终端使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//显示隐藏文件</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool true</span><br><span class="line">//不显示隐藏文件</span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles -bool false</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1465,6 +1433,409 @@
           
             <h5 id="1、利用shouldComponentUpdate函数优化react性能以及引入immutable库的必要性-也适用于react-native"><a href="#1、利用shouldComponentUpdate函数优化react性能以及引入immutable库的必要性-也适用于react-native" class="headerlink" title="1、利用shouldComponentUpdate函数优化react性能以及引入immutable库的必要性(也适用于react-native)"></a>1、利用shouldComponentUpdate函数优化react性能以及引入immutable库的必要性(也适用于react-native)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setState()函数在任何情况下都会导致组件重渲染吗？如果setState()中参数还是原来没有发生任何变化的staten？</span><br><span class="line">如果组件的state没有变化，并且从父组件接收的props也没有变化，那它就一定不会重渲染吗？</span><br><span class="line">如果1，2两种情况下都会导致重渲染，我们该如何避免这种冗杂的操作，从而优化性能？</span><br></pre></td></tr></table></figure>
 <p>参考 <a href="https://www.cnblogs.com/penghuwan/p/6707254.html" target="_blank" rel="noopener">https://www.cnblogs.com/penghuwan/p/6707254.html</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_04/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/15/rn_04/" class="post-title-link" itemprop="url">React Native动画</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-15 10:30:48" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-17 17:11:29" itemprop="dateModified" datetime="2019-01-17T17:11:29+08:00">2019-01-17</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>最近项目要做小游戏，小游戏当然就少不了动画了，一开始打算用h5做，但是考虑到内嵌h5坑可能有点多，所以最后还是选择react native的动画（项目本身就是react native写的，之后用rn代表react naitve）<br></p>
+<h5 id="1、requestAnimationFrame"><a href="#1、requestAnimationFrame" class="headerlink" title="1、requestAnimationFrame"></a>1、requestAnimationFrame</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">export default class demo1 Component &#123;</span><br><span class="line">	constructor(props) &#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state = &#123;</span><br><span class="line">		  width: 100,</span><br><span class="line">		  height: 100</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	startAnimation() &#123;</span><br><span class="line">		let count = 0;</span><br><span class="line">		let &#123; width, height &#125; = this.state;</span><br><span class="line">		requestAnimationFrame(() =&gt; &#123;</span><br><span class="line">			this.setState(&#123;</span><br><span class="line">				widthL: width + 1,</span><br><span class="line">				height: height + 1</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render() &#123;</span><br><span class="line">		let &#123; width, height &#125; = this.state;</span><br><span class="line">		return(</span><br><span class="line">			&lt;View style = &#123; styles.container &#125;&gt;</span><br><span class="line">				&lt;Image </span><br><span class="line">					source = &#123;require(./icon.jpg)&#125;</span><br><span class="line">					style = &#123;&#123;</span><br><span class="line">						width: width,</span><br><span class="line">						height: height</span><br><span class="line">					&#125;&#125;</span><br><span class="line">				/&gt;</span><br><span class="line">				&lt;TouchableOpacity</span><br><span class="line">					style = &#123; styles.instructions &#125;</span><br><span class="line">					onPress = &#123;()=&gt;this.startAnimation()&#125;</span><br><span class="line">				&gt;</span><br><span class="line">					&lt;Text style = &#123;&#123;</span><br><span class="line">						alignSelf: &apos;center&apos;,</span><br><span class="line">						color: &apos;#fff&apos;</span><br><span class="line">					&#125;&#125;&gt;</span><br><span class="line">						click me!</span><br><span class="line">					&lt;/Text&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">			&lt;/View&gt;</span><br><span class="line">		)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方式实现的动画有几个问题：<br></p>
+<ul>
+<li>实现方式是通过不断销毁、创建视图来完成，一方面如果你的视图的数据是动态获取的，那么就需要以合适的方式恢复数据；另一方面，这种方式必然造成性能和内存开销的问题。</li>
+<li>如果需要刷新的View的层级比较深，那么这种方式会带来严重的性能问题。</li>
+<li>requestAnimationFrame毕竟是web上css的用法，在手机上，动画的效果比较生硬，如果需要‘弹性动画’，‘淡入淡出’等效果，则是比较难以实现的（需要辅助各种函数）。</li>
+<li><h5 id="2、setNativeProps"><a href="#2、setNativeProps" class="headerlink" title="2、setNativeProps"></a>2、setNativeProps</h5></li>
+</ul>
+<p>如果执意使用修改state的方式，觉得这种方式更符合当前需求对动画的控制，那么则应当使用原生组件的setNativeProps方法来做对应实现，它会直接修改组件底层特性，会重绘组件，因此性能也远胜动态修改组件内联style的方法。<br><br>我们稍微修改下startAnimation方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">startAnimation() &#123;</span><br><span class="line">  var count = 0;</span><br><span class="line">  while (++count &lt; 50) &#123;</span><br><span class="line">	  requestAnimationFrame(() = &gt;&#123;</span><br><span class="line">		  this.refs.image.setNativeProps(&#123;</span><br><span class="line">			  style: &#123;</span><br><span class="line">				  width: this.state.width++,</span><br><span class="line">				  height: this.state.height++</span><br><span class="line">			  &#125;</span><br><span class="line">		  &#125;);</span><br><span class="line">	  &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中this.refs.image指向的是image视图，效果比上面的好多了。</p>
+<h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5><p>setNativeProps直接修改组件底层特性，不会重绘组件，因此性能也远胜动态修改组件内联style的方法。</p>
+<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><ol>
+<li>setNativeProps属于原生视图的方法，如果我们使用一个动画，单纯只是为了跟踪它的值，那么这个方法有点不合时宜。</li>
+<li>还是和上面一种方式一样，如果需要实现‘弹性动画’，‘淡入淡出’等效果，则还是比较麻烦的。</li>
+</ol>
+<h5 id="3、LayoutAnimation"><a href="#3、LayoutAnimation" class="headerlink" title="3、LayoutAnimation"></a>3、LayoutAnimation</h5><p>当布局变化时，自动将视图运动到它们新的位置上。<br><br>一个常用的调用此API的办法是调用LayoutAnimation.configureNext(config)，然后调用setState。<br><br>其中conf参数格式参考：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	duration: 700,   //持续时间</span><br><span class="line">	create: &#123;    //若是新布局的动画类型</span><br><span class="line">		type: &apos;linear&apos;,  //线性模式</span><br><span class="line">		property: &apos;opacity&apos;  //动画属性，除了opacity还有一个scaleXY可以配置</span><br><span class="line">	&#125;,</span><br><span class="line">	update: &#123;  //若是布局更新的动画类型</span><br><span class="line">		type: &apos;spring&apos;,   //弹跳模式</span><br><span class="line">		springDamping: 0.4  //弹跳阻尼系数</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中动画type的类型可枚举为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spring //弹跳</span><br><span class="line">linear //线性</span><br><span class="line">easeInEaseOut //缓入缓出</span><br><span class="line">easeIn //缓入</span><br><span class="line">easeOut //缓出</span><br><span class="line">keyboard // 键入</span><br></pre></td></tr></table></figure>
+<p>要注意的时，安卓平台使用LayoutAnimation动画必须加上这么一句代码(否则动画会失效):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UIManager.setLayoutAnimationEnabledExperimental &amp;&amp; UIManager.setLayoutAnimationEnabledExperimental(true);</span><br></pre></td></tr></table></figure>
+<p>于是我们一开始的动画就可以这么来写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">export default class demo2 extends Component &#123;</span><br><span class="line">	constructor(props) &#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state = &#123;</span><br><span class="line">			w: 200,</span><br><span class="line">			h: 20</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	_onPress() &#123;</span><br><span class="line">		LayoutAnimation.configureNext(&#123;</span><br><span class="line">			duration: 700,</span><br><span class="line">			create: &#123;</span><br><span class="line">				type: &apos;linear&apos;,</span><br><span class="line">				property: &apos;opacity&apos;</span><br><span class="line">			&#125;,</span><br><span class="line">			update: &#123;</span><br><span class="line">				type: &apos;spring&apos;,</span><br><span class="line">				springDamping: 0.4</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		this.setState(&#123;</span><br><span class="line">			w: this.state.w + 30,</span><br><span class="line">			h: this.state.h + 30</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render() &#123;</span><br><span class="line">		return(</span><br><span class="line">			&lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">				&lt;View style=&#123;[styles.content, &#123;width: this.state.w, height: this.state.h&#125;]&#125;&gt;</span><br><span class="line">					&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;Hi, here is VaJoy&lt;/Text&gt;</span><br><span class="line">				&lt;/View&gt;</span><br><span class="line">				&lt;TouchableOpacity onPress=&#123;this._onPress&#125;&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;Press me!&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">				&lt;TouchableOpacity&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;忽略本按钮&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">			&lt;/View&gt;</span><br><span class="line">		)</span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样动画灵活和流畅多了，<br>我们上面看到的仅仅是局部更新的情况，我们来看看新布局被创建（有新组建加入到视图上）的情况如何：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">export default class demo3 extends Component &#123;</span><br><span class="line">	constructor(props) &#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state = &#123;</span><br><span class="line">			showNewOne: false,</span><br><span class="line">			w: 200,</span><br><span class="line">			h: 20</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	 _onPress() &#123;</span><br><span class="line">		LayoutAnimation.configureNext(&#123;</span><br><span class="line">			duration: 1200,</span><br><span class="line">			create: &#123;</span><br><span class="line">				type: &apos;linear&apos;,</span><br><span class="line">				property: &apos;opacity&apos;  //注意这里，我们设置新布局被创建时的动画特性为透明度</span><br><span class="line">			&#125;,</span><br><span class="line">			update: &#123;</span><br><span class="line">				type: &apos;spring&apos;,</span><br><span class="line">				springDamping: 0.4</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">		this.setState(&#123;w: this.state.w + 30, h: this.state.h + 30, showNewOne : true&#125;)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render() &#123;</span><br><span class="line">		let &#123; showNewOne &#125; = this.state;</span><br><span class="line">		let newOne = showNewOne ?</span><br><span class="line">			(</span><br><span class="line">				&lt;View style=&#123;[styles.content, &#123;width: this.state.w, height: this.state.h&#125;]&#125;&gt;</span><br><span class="line">					&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;new one&lt;/Text&gt;</span><br><span class="line">				&lt;/View&gt;</span><br><span class="line">			) : null;</span><br><span class="line">		return(</span><br><span class="line">			&lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">				&lt;View style=&#123;[styles.content, &#123;width: this.state.w, height: this.state.h&#125;]&#125;&gt;</span><br><span class="line">					&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;Hi, here is VaJoy&lt;/Text&gt;</span><br><span class="line">				&lt;/View&gt;</span><br><span class="line">				&#123;newOne&#125;</span><br><span class="line">				&lt;TouchableOpacity onPress=&#123;this._onPress&#125;&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;Press me!&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">				&lt;TouchableOpacity&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;忽略本按钮&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">			&lt;/View&gt;</span><br><span class="line">		)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="4、Animated"><a href="#4、Animated" class="headerlink" title="4、Animated"></a>4、Animated</h5><p>通过Animated我们可以在确保性能良好的前提下创造更为灵活丰富且易维护的动画。<br><br>不同于上述的动画实现方式，我们得在 Animated.View、Animated.Text 或 Animated.Image 动画组件上运用 Animate 模块的动画能力(如果有在其他组件上的需求，可以使用Animated.createAnimatedComponent方法来对其它类型的组件创建动画)<br><br>下面来个简单的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;;</span><br><span class="line">import &#123;</span><br><span class="line">	AppRegistry,</span><br><span class="line">	StyleSheet,</span><br><span class="line">	Text,</span><br><span class="line">	View,</span><br><span class="line">	Easing,</span><br><span class="line">	Animated,</span><br><span class="line">	TouchableOpacity,</span><br><span class="line">&#125; from &apos;react-native&apos;</span><br><span class="line"></span><br><span class="line">const _animateHandler;</span><br><span class="line">export default class demo4 extends Component &#123;</span><br><span class="line">	constructor(props) &#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state = &#123;</span><br><span class="line">			opacityAnmValue: new Animated.Value(0)</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	componentDidMount() &#123;</span><br><span class="line">		_animateHandler = Animated.timing(</span><br><span class="line">			this.state.opacityAnmValue,</span><br><span class="line">			&#123;</span><br><span class="line">				toValue: 1,  //透明度动画最终值</span><br><span class="line">				duration: 3000, </span><br><span class="line">				easing: Easing.bezier(0.15,0.73,0.37,1.2) //缓冲函数</span><br><span class="line">			&#125;</span><br><span class="line">		)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	_onPress() &#123;</span><br><span class="line">		_animateHandler.start &amp;&amp; _animateHandler.start()</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render() &#123;</span><br><span class="line">		return(</span><br><span class="line">			&lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">				&lt;Animated.View ref=&quot;view&quot; style=&#123;[styles.content, &#123;width: 200, height: 20, opacity: this.state.opacityAnmValue&#125;]&#125;&gt;</span><br><span class="line">					&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;Hi, here is VaJoy&lt;/Text&gt;</span><br><span class="line">				&lt;/Animated.View&gt;</span><br><span class="line">				&lt;TouchableOpacity onPress=&#123;this._onPress&#125;&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;Press me!&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">				&lt;TouchableOpacity &gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;忽略本按钮&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">			&lt;/View&gt;</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const styles = StyleSheet.create(&#123;</span><br><span class="line">	container: &#123;</span><br><span class="line">		flex: 1,</span><br><span class="line">		justifyContent: &apos;center&apos;,</span><br><span class="line">		alignItems: &apos;center&apos;</span><br><span class="line">	&#125;,</span><br><span class="line">	content: &#123;</span><br><span class="line">		justifyContent: &apos;center&apos;,</span><br><span class="line">		backgroundColor: &apos;yellow&apos;,</span><br><span class="line">	&#125;,</span><br><span class="line">	button: &#123;</span><br><span class="line">		marginTop: 10,</span><br><span class="line">		paddingVertical: 10,</span><br><span class="line">		paddingHorizontal: 20,</span><br><span class="line">		backgroundColor: &apos;black&apos;</span><br><span class="line">	&#125;,</span><br><span class="line">	buttonText: &#123;</span><br><span class="line">		color: &apos;white&apos;,</span><br><span class="line">		fontSize: 16,</span><br><span class="line">		fontWeight: &apos;bold&apos;,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>点击按钮后,Animated.View会以bezier曲线形式执行时长3秒的透明度动画(由0到1):<br></p>
+<p>1、以 new Animated.Value(0) 实例化动画的初始值给state：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.state = &#123;</span><br><span class="line">	//设置透明度动画初始值</span><br><span class="line">	opacityAnmValue: new Animated.Value(0)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2、通过 Animated.timing 我们定义了一个动画事件，在后续可以以 .start() 或 .stop() 方法来开始/停止该动画：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">	_animateHandler = Animated.timing(this.state.opacityAnmValue, &#123;</span><br><span class="line">			toValue: 1,  //透明度动画最终值</span><br><span class="line">			duration: 3000,   //动画时长3000毫秒</span><br><span class="line">			easing: Easing.bezier(0.15, 0.73, 0.37, 1.2)</span><br><span class="line">		&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们在点击事件中触发了动画的.start方法让它跑起来:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">_onPress() &#123;</span><br><span class="line">	_animateHandler.start &amp;&amp; _animateHandler.start()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>start 方法接受一个回调函数，会在动画结束时触发，并传入一个参数 {finished: true/false}，若动画是正常结束的，finished 字段值为true，若动画是因为被调用 .stop() 方法而提前结束的，则 finished 字段值为false。<br></p>
+<p>3、动画的绑定是在 上的，我们把实例化的动画初始值传入 style 中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Animated.View ref=&quot;view&quot; style=&#123;[styles.content, &#123;width: 200, height: 20, opacity: this.state.opacityAnmValue&#125;]&#125;&gt;</span><br><span class="line">&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;Hi, here is VaJoy&lt;/Text&gt;</span><br><span class="line">&lt;/Animated.View&gt;</span><br></pre></td></tr></table></figure>
+<p>然后。。。就没有然后了，很简单吧。<br></p>
+<p>这里需要讲一下的应该是定义动画事件的Animated.timing(animateValue, conf) 方法，其中设置参数格式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  duration: 动画持续的时间（单位是毫秒），默认为500。</span><br><span class="line">  easing：一个用于定义曲线的渐变函数。阅读Easing模块可以找到许多预定义的函数。iOS默认为Easing.inOut(Easing.ease)。</span><br><span class="line">  delay: 在一段时间之后开始动画（单位是毫秒），默认为0。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里提及的 Easing 动画函数模块在 react-native/Libraries/Animated/src/ 目录下，该模块预置了 linear、ease、elastic、bezier 等诸多缓动特性，有兴趣可以去了解。<br></p>
+<p>另外除了 Animated.timing，Animated 还提供了另外两个动画事件创建接口：<br></p>
+<p>1、Animated.spring(animateValue, conf) —— 基础的单次弹跳物理模型，支持origami标准，conf参考：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  friction: 控制“弹跳系数”、夸张系数，默认为7。</span><br><span class="line">  tension: 控制速度，默认40。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;;</span><br><span class="line">import &#123;</span><br><span class="line">	AppRegistry,</span><br><span class="line">	StyleSheet,</span><br><span class="line">	Text,</span><br><span class="line">	View,</span><br><span class="line">	Easing,</span><br><span class="line">	Animated,</span><br><span class="line">	TouchableOpacity,</span><br><span class="line">&#125; from &apos;react-native&apos;</span><br><span class="line"></span><br><span class="line">let _animateHandler;</span><br><span class="line"></span><br><span class="line">export default class demo5 extends Component &#123;</span><br><span class="line">	constructor(props) &#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state = &#123;</span><br><span class="line">			bounceValue : new Animated.Value(0)   //设置缩放动画初始值</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	componentDidMount() &#123;</span><br><span class="line">		this.state.bounceValue.setValue(1.5);     // 设置一个较大的初始值</span><br><span class="line">		_animateHandler = Animated.spring(this.state.bounceValue, &#123;</span><br><span class="line">			toValue: 1,</span><br><span class="line">			friction: 8,</span><br><span class="line">			tension: 35</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	_onPress() &#123;</span><br><span class="line">		_animateHandler.start &amp;&amp; _animateHandler.start()</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	_reload() &#123;</span><br><span class="line">		AppRegistry.reload()</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render() &#123;</span><br><span class="line">		return(</span><br><span class="line">			&lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">				&lt;Animated.View ref=&quot;view&quot; style=&#123;[styles.content, &#123;width: 200, height: 20, transform: [&#123;scale: this.state.bounceValue&#125;]&#125;]&#125;&gt;</span><br><span class="line">					&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;Hi, here is VaJoy&lt;/Text&gt;</span><br><span class="line">				&lt;/Animated.View&gt;</span><br><span class="line">				&lt;TouchableOpacity onPress=&#123;this._onPress&#125;&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;Press me!&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">				&lt;TouchableOpacity onPress=&#123;this._reload&#125;&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;忽略本按钮&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">			&lt;/View&gt;</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const styles = StyleSheet.create(&#123;</span><br><span class="line">	container: &#123;</span><br><span class="line">		flex: 1,</span><br><span class="line">		justifyContent: &apos;center&apos;,</span><br><span class="line">		alignItems: &apos;center&apos;</span><br><span class="line">	&#125;,</span><br><span class="line">	content: &#123;</span><br><span class="line">		justifyContent: &apos;center&apos;,</span><br><span class="line">		backgroundColor: &apos;yellow&apos;,</span><br><span class="line">	&#125;,</span><br><span class="line">	button: &#123;</span><br><span class="line">		marginTop: 10,</span><br><span class="line">		paddingVertical: 10,</span><br><span class="line">		paddingHorizontal: 20,</span><br><span class="line">		backgroundColor: &apos;black&apos;</span><br><span class="line">	&#125;,</span><br><span class="line">	buttonText: &#123;</span><br><span class="line">		color: &apos;white&apos;,</span><br><span class="line">		fontSize: 16,</span><br><span class="line">		fontWeight: &apos;bold&apos;,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>留意这里我们用了 animateValue.setValue(1.5) 方法来修改动画属性值。<br></p>
+<p>2、Animated.decay(animateValue, conf) —— 以一个初始速度开始并且逐渐减慢停止，conf参考：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  velocity: 起始速度，必填参数。</span><br><span class="line">  deceleration: 速度衰减比例，默认为0.997。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参考代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">let _animateHandler;</span><br><span class="line">export default class demo6 extends Component &#123;</span><br><span class="line">	constructor(props) &#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state = &#123;</span><br><span class="line">			bounceValue : new Animated.Value(0.1)</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	componentDidMount() &#123;</span><br><span class="line">		 _animateHandler = Animated.decay(this.state.bounceValue, &#123;</span><br><span class="line">			toValue: 0.2,</span><br><span class="line">			velocity: 0.1</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	_onPress() &#123;</span><br><span class="line">		_animateHandler.start &amp;&amp; _animateHandler.start()</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render() &#123;</span><br><span class="line">		return(</span><br><span class="line">			&lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">				&lt;Animated.View ref=&quot;view&quot; style=&#123;[styles.content, &#123;width: 200, height: 30, transform: [&#123;scale: this.state.bounceValue&#125;]&#125;]&#125;&gt;</span><br><span class="line">					&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;Hi, here is VaJoy&lt;/Text&gt;</span><br><span class="line">				&lt;/Animated.View&gt;</span><br><span class="line">				&lt;TouchableOpacity onPress=&#123;this._onPress&#125;&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;Press me!&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">				&lt;TouchableOpacity&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;忽略本按钮&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">			&lt;/View&gt;</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于最后介绍的两个动画效果，可能得熟悉一些物理、数学模型才能更好地来做控制，大部分情况下，咱们直接使用 Animated.timing 就足够满足需求了。<br></p>
+<h5 id="监听动画"><a href="#监听动画" class="headerlink" title="监听动画"></a>监听动画</h5><p>1、有时候我们需要在动画的过程中监听到某动画时刻的属性值，可以通过animateValue.stopAnimation(callback) 或 animateValue.addListener(callback) 来实现<br>其中stopAnimation会停止当前动画并在回调函数中返回一个{value : number}对象，value对应最后一刻的动画属性值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">const _animateHandler, _isFirsPress = 0;</span><br><span class="line">export default class demo7 extends Component &#123;</span><br><span class="line">	constructor(props) &#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state = &#123;</span><br><span class="line">			opacityAnmValue : new Animated.Value(0)   //设置透明度动画初始值</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	componentDidMount() &#123;</span><br><span class="line">		_animateHandler = Animated.timing(</span><br><span class="line">			this.state.opacityAnmValue, &#123;</span><br><span class="line">				toValue: 1,</span><br><span class="line">				duration: 6000,</span><br><span class="line">				easing: Easing.linear</span><br><span class="line">			&#125;</span><br><span class="line">		)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	_onPress() &#123;</span><br><span class="line">		if(_isFirstPress === 0) &#123;</span><br><span class="line">			_animateHandler.start &amp;&amp; _animateHandler.start();</span><br><span class="line">			_isFirsPress = 1</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			this.state.opacityAnmValue.stopAnimation(value =&gt; &#123;</span><br><span class="line">				Alert.alert(</span><br><span class="line">					&quot;动画结束，最终值&quot;,</span><br><span class="line">					JSON.stringify(value),</span><br><span class="line">					[</span><br><span class="line">						&#123;text: &apos;OK&apos;, onPress: () =&gt; &#123;&#125;&#125;</span><br><span class="line">					]</span><br><span class="line">				)</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render() &#123;</span><br><span class="line">		return(</span><br><span class="line">			&lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">				&lt;Animated.View style=&#123;[styles.content, &#123;width: 200, height: 20, opacity: this.state.opacityAnmValue&#125;]&#125;&gt;</span><br><span class="line">					&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;Hi, here is VaJoy&lt;/Text&gt;</span><br><span class="line">				&lt;/Animated.View&gt;</span><br><span class="line">				&lt;TouchableOpacity onPress=&#123;this._onPress&#125;&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;Press me!&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">				&lt;TouchableOpacity &gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;忽略本按钮&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">			&lt;/View&gt;</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>而addListener方法会在动画的执行过程中调用callback回调函数，提供一个最近的值作为参数。<br></p>
+<p>2、有时候我们希望在某个交互事件（特别是手势）中更灵活地捕获某个事件对象属性值，并动态赋予某个变量，对于这种需求可以通过 Animated.event 来实现。<br></p>
+<p>它接受一个数组为参数，数组中的层次对应绑定事件参数的相应映射，听着有点绕，看例子就很好理解了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var scrollX = 0,</span><br><span class="line">	  pan = &#123;</span><br><span class="line">			x: 0,</span><br><span class="line">			y: 0</span><br><span class="line">	  &#125;;</span><br><span class="line">//...</span><br><span class="line">onScroll : Animated.event(</span><br><span class="line">  [&#123;nativeEvent: &#123;contentOffset: &#123;x: scrollX&#125;&#125;&#125;]   // scrollX = e.nativeEvent.contentOffset.x</span><br><span class="line">)</span><br><span class="line">onPanResponderMove : Animated.event([</span><br><span class="line">  null,          // 忽略原生事件</span><br><span class="line">  &#123;dx: pan.x, dy: pan.y&#125;     // 从gestureState中解析出dx和dy的值</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+<p>onScroll是绑定给某个组件的滚动事件，而onPanResponderMove是 PanResponder 模块下的响应事件。<br></p>
+<p>拿上方onPanResponderMove的例子来讲，该事件方法接收两个参数 e 和 gestureState，其中gestureState的属性有：<br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">stateID - 触摸状态的ID。在屏幕上有至少一个触摸点的情况下，这个ID会一直有效。</span><br><span class="line">moveX - 最近一次移动时的屏幕横坐标</span><br><span class="line">moveY - 最近一次移动时的屏幕纵坐标</span><br><span class="line">x0 - 当响应器产生时的屏幕坐标</span><br><span class="line">y0 - 当响应器产生时的屏幕坐标</span><br><span class="line">dx - 从触摸操作开始时的累计横向路程</span><br><span class="line">dy - 从触摸操作开始时的累计纵向路程</span><br><span class="line">vx - 当前的横向移动速度</span><br><span class="line">vy - 当前的纵向移动速度</span><br><span class="line">numberActiveTouches - 当前在屏幕上的有效触摸点的数量</span><br></pre></td></tr></table></figure>
+<p>来个简单的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">class AwesomeProject extends Component &#123;</span><br><span class="line">	constructor(props) &#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state = &#123;</span><br><span class="line">			transY : new Animated.Value(0)</span><br><span class="line">		&#125;;</span><br><span class="line">		this._panResponder = &#123;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">componentWillMount处预先创建手势响应器</span><br><span class="line">	componentWillMount() &#123;</span><br><span class="line">		this._panResponder = PanResponder.create(&#123;</span><br><span class="line">			onStartShouldSetPanResponder: this._returnTrue.bind(this),</span><br><span class="line">			onMoveShouldSetPanResponder: this._returnTrue.bind(this),</span><br><span class="line">			//手势开始处理</span><br><span class="line">			//手势移动时的处理</span><br><span class="line">			onPanResponderMove: Animated.event([null, &#123;</span><br><span class="line">				dy : this.state.transY</span><br><span class="line">			&#125;])</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	_returnTrue(e, gestureState) &#123;</span><br><span class="line">		return true;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render() &#123;</span><br><span class="line">		return (</span><br><span class="line">			&lt;View style=&#123;styles.container&#125;&gt;</span><br><span class="line">				&lt;Animated.View style=&#123;[styles.content, &#123;width: this.state.w, height: this.state.h,</span><br><span class="line">					transform: [&#123;</span><br><span class="line">					  translateY : this.state.transY</span><br><span class="line">					&#125;]</span><br><span class="line">				&#125;]&#125;&gt;</span><br><span class="line">					&lt;Text style=&#123;[&#123;textAlign: &apos;center&apos;&#125;]&#125;&gt;Hi, here is VaJoy&lt;/Text&gt;</span><br><span class="line">				&lt;/Animated.View&gt;</span><br><span class="line">				&lt;TouchableOpacity&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125; &#123;...this._panResponder.panHandlers&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;control&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line"></span><br><span class="line">				&lt;TouchableOpacity&gt;</span><br><span class="line">					&lt;View style=&#123;styles.button&#125;&gt;</span><br><span class="line">						&lt;Text style=&#123;styles.buttonText&#125;&gt;忽略此按钮&lt;/Text&gt;</span><br><span class="line">					&lt;/View&gt;</span><br><span class="line">				&lt;/TouchableOpacity&gt;</span><br><span class="line">			&lt;/View&gt;</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/rn_02/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="achirsh">
+      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="achirsh的blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/15/rn_02/" class="post-title-link" itemprop="url">React Native解决'libgnustl_shared.so is 32-bit instead if 64-bit'报错</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:42:30" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>React Native项目在64位Android手机上运行，会提示<br>“/data/data/com.xxx.xxx/lib-main/libgnustl_shared.so”is 32-bit instead of 64-bit这个错误。</p>
+<p>解决方法就是取消掉所有64位的.so文件，全部加载32位的就可以了，下面是步骤</p>
+<ol>
+<li>在项目的根部录的gradle.properties里面添加一行代码，android.useDeprecatedNdk = true.</li>
+<li>在build.gradle文件里添加以下代码：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">	...</span><br><span class="line">	defaultConfig &#123;</span><br><span class="line">		...</span><br><span class="line">		ndk &#123;</span><br><span class="line">			abiFilters: &quot;armeabi-v7a&quot;,&quot;x86&quot;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		packagingOptions &#123;</span><br><span class="line">			exclude &quot;lib/arm64-v8a/librealm-jni.so&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1685,495 +2056,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/css_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/css_01/" class="post-title-link" itemprop="url">css3隔行变色</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-01-17 16:46:05" itemprop="dateModified" datetime="2019-01-17T16:46:05+08:00">2019-01-17</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">div:nth-of-type(odd)&#123;background:#fff&#125;  /*奇数行*/</span><br><span class="line"></span><br><span class="line">div:nth-of-type(even)&#123;background:#000&#125;   /*偶数行 */</span><br><span class="line"></span><br><span class="line">div:nth-child(4n+1)&#123;background:#fff&#125;  /*从第一行开始算起 每隔四个（包含第四个）使用此样式*/</span><br><span class="line"></span><br><span class="line">div:nth-child(4n+2)&#123;background:#fff&#125;  /*从第二行开始算起 每隔四个（包含第四个）使用此样式*/</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-child(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是你北朝鲜绵第n个子元素.n可以是数字(1,2,3),关键字(odd,even),公式(2n,2n+3),数字是从1开始的,不是0.如:</span><br><span class="line"></span><br><span class="line">tr:nth-child(3)匹配所有表格里第3行的tr</span><br><span class="line"></span><br><span class="line">tr:nth-child(2n+1)匹配所有表格的奇数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(2n)匹配所有的偶数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(odd)匹配所有的奇数行</span><br><span class="line"></span><br><span class="line">tr:nth-child(even)匹配所有的偶数行</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-last-child(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素的倒数第n个子元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-of-type(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素所有子元素中类型为E的子元素集合中的第n个,n可以是数字(1,2,3),关键字(odd,even),公式(2n,2n+3),数字是从1开始的,不是0.如p:nth-of-type(2)匹配出,&amp;lt;div&amp;gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中第二个p元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:nth-last-of-type(n)&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择E元素,且它是父元素的倒数第n个子节点</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:last-child&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中的最后一个字节点</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:first-of-tpe&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中是第一个该类型的元素,如p:first-of-type匹配&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;中的第一个p元素.</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:last-of-type&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出E元素,且它是父元素中的最后一个该类型的元素.如:p:last-of-type匹配,&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中的最后一个p元素,它同E:nth-last-of-tpe(1)意义相同</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:only-child&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">找出父元素中只包括一个的子元素,且该元素是E</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:only-of-type&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">选择其父元素只包含一个同类型的子元素,且该子元素匹配E.如p:only-of-type匹配&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;中的p,因为div中只包括一个p元素</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;E:empty&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">匹配E元素,且该元素不包含子节点,注意,文字也属于节点</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/achirsh/achirsh.github.io/2019/01/15/android_01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="achirsh">
-      <meta itemprop="description" content="做自己爱做的事，爱自己在做的事！">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="achirsh的blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/15/android_01/" class="post-title-link" itemprop="url">Android版本名称、版本号、API level对应关系</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-15 10:30:48 / Modified: 16:47:59" itemprop="dateCreated datePublished" datetime="2019-01-15T10:30:48+08:00">2019-01-15</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <table>
-<thead>
-<tr>
-<th>-</th>
-<th>Code name</th>
-<th>Version</th>
-<th>API level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>no code name</td>
-<td>1.0</td>
-<td>API level 1</td>
-</tr>
-<tr>
-<td>2</td>
-<td>no code name</td>
-<td>1.1</td>
-<td>API level 2</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Cupcake</td>
-<td>1.5</td>
-<td>API level 3,NDK 1</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Donut</td>
-<td>1.6</td>
-<td>API level 4,NDK 2</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Eclair</td>
-<td>2.0</td>
-<td>API level 5</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Eclair</td>
-<td>2.0.1</td>
-<td>API level 6</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Eclair</td>
-<td>2.1</td>
-<td>API level 7,NDK3</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Froyo</td>
-<td>2.2.x</td>
-<td>API level 8,NDK 4</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Gingerbread</td>
-<td>2.3-2.3.2</td>
-<td>API level 9,NDK5</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Gingerbread</td>
-<td>2.3.3-2.3.7</td>
-<td>API level 10</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Honeycomb</td>
-<td>3.0</td>
-<td>API level 11</td>
-</tr>
-<tr>
-<td>12</td>
-<td>Honeycomb</td>
-<td>3.1</td>
-<td>API level 12,NDK 6</td>
-</tr>
-<tr>
-<td>13</td>
-<td>Honeycomb</td>
-<td>3.2x</td>
-<td>API level 13</td>
-</tr>
-<tr>
-<td>14</td>
-<td>Ice Cream Sandwich</td>
-<td>4.0.1-4.0.2</td>
-<td>API level 14,NDK 7</td>
-</tr>
-<tr>
-<td>15</td>
-<td>Ice Cream Sandwich</td>
-<td>4.0.3-4.0.4</td>
-<td>API level 15,NDK 8</td>
-</tr>
-<tr>
-<td>16</td>
-<td>Jelly Bean</td>
-<td>4.1x</td>
-<td>API level 16</td>
-</tr>
-<tr>
-<td>17</td>
-<td>Jelly Bean</td>
-<td>4.2x</td>
-<td>API level 17</td>
-</tr>
-<tr>
-<td>18</td>
-<td>Jelly Bean</td>
-<td>4.3x</td>
-<td>API level 18</td>
-</tr>
-<tr>
-<td>19</td>
-<td>Jelly Bean</td>
-<td>4.4-4.4.4</td>
-<td>API level 19</td>
-</tr>
-<tr>
-<td>20</td>
-<td>Lollipop</td>
-<td>5.0</td>
-<td>API level 21</td>
-</tr>
-<tr>
-<td>21</td>
-<td>Lollipop</td>
-<td>5.1</td>
-<td>API level 22</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Marshmallow</td>
-<td>6.0</td>
-<td>API level 23</td>
-</tr>
-<tr>
-<td>23</td>
-<td>Nougat</td>
-<td>7.0</td>
-<td>API level 24</td>
-</tr>
-<tr>
-<td>24</td>
-<td>Nougat</td>
-<td>7.1.1</td>
-<td>API level 25</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2221,7 +2103,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2260,7 +2142,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
