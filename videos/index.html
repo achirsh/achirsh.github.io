@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>前端播放m3u8格式视频</title>
     <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
     <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js" type="text/javascript"></script>
     <!-- videojs-contrib-hls 用于在电脑端播放 如果只需手机播放可以不引入 -->
 </head>
@@ -14,39 +14,71 @@
         .video-js .vjs-tech {position: relative !important;}
     </style>
     <div>
-        <video id="video_player" width="660" height="364" controls="controls"></video>
+        <video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup='{}' style='width: 100%;height: auto'>
+        </video>
     </div>
+    <div class="qiehuan" style="width:100px;height: 100px;background: red;margin:0 auto;line-height: 100px;color:#fff;text-align: center">切换视频</div>
 </body>
  
 <script>
-    function revokeUrl() {
-        window.URL.revokeObjectURL(url);
-    }
+    // videojs 简单使用
+    // var myVideo = videojs('myVideo', {
+    //     bigPlayButton: true,
+    //     textTrackDisplay: false,
+    //     posterImage: false,
+    //     errorDisplay: false,
+    // })
+    // myVideo.play()
+    // var changeVideo = function (vdoSrc) {
+    //     if (/\.m3u8$/.test(vdoSrc)) { //判断视频源是否是m3u8的格式
+    //         myVideo.src({
+    //             src: vdoSrc,
+    //             type: 'application/x-mpegURL' //在重新添加视频源的时候需要给新的type的值
+    //         })
+    //     } else {
+    //         myVideo.src(vdoSrc)
+    //     }
+    //     myVideo.load();
+    //     myVideo.play();
+    // }
+    // var src = 'https://achirsh.github.io/videos/demo.m3u8';
+    // document.querySelector('.qiehuan').addEventListener('click', function () {
+    //     changeVideo(src);
+    // })
 
-    // 请注意，底下的video_player为你video标签里的id
     window.onload = function() {
-        //创建XMLHttpRequest对象
         var xhr = new XMLHttpRequest();
-        var url = "http://192.168.50.79:8888/index"; // 这里的url为你的服务端地址
+        var url = "http://192.168.50.79:8888/medium.m3u8?key="; // 这里的url为你的服务端地址
         //配置请求方式、请求地址以及是否同步
-        xhr.open('POST', url, true);
+        xhr.open('GET', `${url + window.btoa("hello")}`, true);
         //设置请求结果类型为blob
-        xhr.responseType = 'blob';
         //请求成功回调函数
         xhr.onload = function (e) {
             if (this.status == 200) {//请求成功
-                //获取blob对象
-                var blob = this.response;
-                var video = document.getElementById('video_player');
-                //获取blob对象地址，并把值赋给容器
-                video.onload = function(e) {
-                    window.URL.revokeObjectURL(video.src);
-                };
-                console.log(blob)
-                var obj_url = window.URL.createObjectURL(blob);
-                console.log(obj_url)
-                video.src = obj_url;
-                // video.play();
+                var myVideo = videojs('myVideo', {
+                    bigPlayButton: true,
+                    textTrackDisplay: false,
+                    posterImage: false,
+                    errorDisplay: false,
+                })
+
+                var changeVideo = function (vdoSrc) {
+                    if (/\.m3u8$/.test(vdoSrc)) { //判断视频源是否是m3u8的格式
+                        myVideo.src({
+                            src: vdoSrc,
+                            type: 'application/x-mpegURL' //在重新添加视频源的时候需要给新的type的值
+                        })
+                    } else {
+                        myVideo.src(vdoSrc)
+                    }
+                    myVideo.load();
+                    myVideo.play();
+                }
+                const m3u8 = window.atob(this.response)
+                changeVideo(m3u8);
+                document.querySelector('.qiehuan').addEventListener('click', function () {
+                    changeVideo(m3u8);
+                })
             }
         };
         xhr.send();
