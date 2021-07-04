@@ -16,7 +16,10 @@ var server = http.createServer(function(req, res) {
         const { key } = path.query
         const value = Buffer.from(key, 'base64').toString('utf-8')
         if (value == 'hello') {
-            res.write(Buffer.from('https://achirsh.github.io/videos/demo.m3u8').toString('base64'));
+            const file = fs.readFileSync('./demo.m3u8');
+            res.write(Buffer.from(file).toString('base64'));
+
+//             res.write(Buffer.from('https://achirsh.github.io/videos/demo.m3u8').toString('base64'));
         } else {
             res.write('');
         }
