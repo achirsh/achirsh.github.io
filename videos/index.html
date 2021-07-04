@@ -37,7 +37,7 @@
         // };
         // xhr.send();
 
-        const m3u8 = 'aHR0cHM6Ly9hY2hpcnNoLmdpdGh1Yi5pby92aWRlb3MvZGVtby5tM3U4'
+        const m3u8 = window.atob('aHR0cHM6Ly9hY2hpcnNoLmdpdGh1Yi5pby92aWRlb3MvZGVtby5tM3U4')
         if(Hls.isSupported()) {
             var video = document.getElementById('video');
             var hls = new Hls();
