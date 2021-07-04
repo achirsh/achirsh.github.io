@@ -18,23 +18,34 @@
  
 <script>
     window.onload = function() {
-        var xhr = new XMLHttpRequest();
-        var url = "http://192.168.50.79:8888/medium.m3u8?key=";
-        xhr.open('GET', `${url + window.btoa("hello")}`, true);
-        xhr.onload = function (e) {
-            if (this.status == 200) {
-                const m3u8 = window.atob(this.response)
-                if(Hls.isSupported()) {
-                    var video = document.getElementById('video');
-                    var hls = new Hls();
-                    hls.loadSource(m3u8);
-                    hls.attachMedia(video);
-                    hls.on(Hls.Events.MANIFEST_PARSED,function() {
-                        video.play();
-                    });
-                }
-            }
-        };
-        xhr.send();
+        // var xhr = new XMLHttpRequest();
+        // var url = "http://192.168.50.79:8888/medium.m3u8?key=";
+        // xhr.open('GET', `${url + window.btoa("hello")}`, true);
+        // xhr.onload = function (e) {
+        //     if (this.status == 200) {
+        //         const m3u8 = window.atob(this.response)
+        //         if(Hls.isSupported()) {
+        //             var video = document.getElementById('video');
+        //             var hls = new Hls();
+        //             hls.loadSource(m3u8);
+        //             hls.attachMedia(video);
+        //             hls.on(Hls.Events.MANIFEST_PARSED,function() {
+        //                 video.play();
+        //             });
+        //         }
+        //     }
+        // };
+        // xhr.send();
+
+        const m3u8 = 'aHR0cHM6Ly9hY2hpcnNoLmdpdGh1Yi5pby92aWRlb3MvZGVtby5tM3U4'
+        if(Hls.isSupported()) {
+            var video = document.getElementById('video');
+            var hls = new Hls();
+            hls.loadSource(m3u8);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                video.play();
+            });
+        }
     }
 </script>
