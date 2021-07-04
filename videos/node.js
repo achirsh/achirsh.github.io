@@ -23,6 +23,8 @@
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
+var path = require('path');
+var crypto = require('crypto');
 
 var server = http.createServer(function(req, res) {
     res.writeHead(200, {
@@ -30,11 +32,31 @@ var server = http.createServer(function(req, res) {
         'Access-Control-Allow-Origin': '*'
     });
 
-    var pathname = url.parse(req.url, true).pathname;
-    if (pathname == '/index') {
-        const data = fs.readFileSync('./1.jpg');
+    var path = url.parse(req.url, true);
+    if (path.pathname == '/index') {
+        const video = fs.readFileSync('./demo.mp4');
+        const length = video.length;
+        let result = '';
+        for (let i = 0; i < length; i++) {
+            const binStr = Number(video[i]).toString(2);
+            result += '0'.repeat(8 - binStr.length) + binStr;
+        }
 
-        res.write(data);
+        const demo = fs.readFileSync('./')
+
+        res.write(result.toString());
+        res.end();
+    }
+
+    if (path.pathname == '/medium.m3u8') {
+        const { key } = path.query
+        const value = Buffer.from(key, 'base64').toString('utf-8')
+        if (value == 'hello') {
+            const file = fs.readFileSync('./demo.m3u8');
+            res.write(Buffer.from('https://achirsh.github.io/videos/demo.m3u8').toString('base64'));
+        } else {
+            res.write('');
+        }
         res.end();
     }
 })
