@@ -13,36 +13,41 @@
         .video-js .vjs-tech {position: relative !important;}
     </style>
     <div>
-        <video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup='{}' style='width: 100%;height: auto'>
-            <source id="source" src="https://achirsh.github.io/videos/demo.m3u8" type="application/x-mpegURL"></source>
-        </video>
+        <video id="video_player" width="660" height="364" controls="controls"></video>
     </div>
-    <div class="qiehuan" style="width:100px;height: 100px;background: red;margin:0 auto;line-height: 100px;color:#fff;text-align: center">切换视频</div>
 </body>
  
 <script>
-    // videojs 简单使用
-    var myVideo = videojs('myVideo', {
-        bigPlayButton: true,
-        textTrackDisplay: false,
-        posterImage: false,
-        errorDisplay: false,
-    })
-    myVideo.play()
-    var changeVideo = function (vdoSrc) {
-        if (/\.m3u8$/.test(vdoSrc)) { //判断视频源是否是m3u8的格式
-            myVideo.src({
-                src: vdoSrc,
-                type: 'application/x-mpegURL' //在重新添加视频源的时候需要给新的type的值
-            })
-        } else {
-            myVideo.src(vdoSrc)
-        }
-        myVideo.load();
-        myVideo.play();
+    function revokeUrl() {
+        window.URL.revokeObjectURL(url);
     }
-    var src = 'https://achirsh.github.io/videos/demo.m3u8';
-    document.querySelector('.qiehuan').addEventListener('click', function () {
-        changeVideo(src);
-    })
+
+    // 请注意，底下的video_player为你video标签里的id
+    window.onload = function() {
+        //创建XMLHttpRequest对象
+        var xhr = new XMLHttpRequest();
+        var url = "http://192.168.50.79:8888/index"; // 这里的url为你的服务端地址
+        //配置请求方式、请求地址以及是否同步
+        xhr.open('POST', url, true);
+        //设置请求结果类型为blob
+        xhr.responseType = 'blob';
+        //请求成功回调函数
+        xhr.onload = function (e) {
+            if (this.status == 200) {//请求成功
+                //获取blob对象
+                var blob = this.response;
+                var video = document.getElementById('video_player');
+                //获取blob对象地址，并把值赋给容器
+                video.onload = function(e) {
+                    window.URL.revokeObjectURL(video.src);
+                };
+                console.log(blob)
+                var obj_url = window.URL.createObjectURL(blob);
+                console.log(obj_url)
+                video.src = obj_url;
+                // video.play();
+            }
+        };
+        xhr.send();
+    }
 </script>
